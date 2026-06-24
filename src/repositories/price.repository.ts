@@ -1,0 +1,174 @@
+import { and, desc, eq } from "drizzle-orm";
+
+import type { Database } from "../db/client";
+import { itemPrices } from "../db/schema";
+
+export type NewItemPrice = typeof itemPrices.$inferInsert;
+export type ItemPrice = typeof itemPrices.$inferSelect;
+
+const MAX_QUERY_BINDINGS = 90;
+const MAX_INSERT_ROWS = 12;
+
+const chunk = <T>(values: readonly T[], size: number): T[][] => {
+  const chunks: T[][] = [];
+  for (let index = 0; index < values.length; index += size) {
+    chunks.push(values.slice(index, index + size));
+  }
+  return chunks;
+};
+
+const compareStrings = (left: string, right: string): number =>
+  left < right ? -1 : left > right ? 1 : 0;
+
+export const findLatestPricesForItemsAndLeagues = async (
+  database: D1Database,
+  itemIds: readonly string[],
+  leagueIds: readonly string[]
+): Promise<ItemPrice[]> => {
+  const uniqueItemIds = [...new Set(itemIds)];
+  const uniqueLeagueIds = [...new Set(leagueIds)];
+  if (uniqueItemIds.length === 0 || uniqueLeagueIds.length === 0) return [];
+
+  const itemChunkSize = Math.min(
+    uniqueItemIds.length,
+    MAX_QUERY_BINDINGS -
+      Math.min(uniqueLeagueIds.length, MAX_QUERY_BINDINGS / 2)
+  );
+  const leagueChunkSize = MAX_QUERY_BINDINGS - itemChunkSize;
+  const pricesByItemAndLeague = new Map<string, Map<string, ItemPrice>>();
+
+  for (const itemIdChunk of chunk(uniqueItemIds, itemChunkSize)) {
+    for (const leagueIdChunk of chunk(uniqueLeagueIds, leagueChunkSize)) {
+      const itemPlaceholders = itemIdChunk.map(() => "?").join(", ");
+      const leaguePlaceholders = leagueIdChunk.map(() => "?").join(", ");
+      const query = `
+        WITH ranked_prices AS (
+          SELECT
+            id,
+            sync_run_id AS syncRunId,
+            item_id AS itemId,
+            league_id AS leagueId,
+            chaos_value AS chaosValue,
+            source,
+            captured_at AS capturedAt,
+            created_at AS createdAt,
+            ROW_NUMBER() OVER (
+              PARTITION BY item_id, league_id
+              ORDER BY captured_at DESC, id DESC
+            ) AS row_number
+          FROM item_prices
+          WHERE item_id IN (${itemPlaceholders})
+            AND league_id IN (${leaguePlaceholders})
+        )
+        SELECT
+          id,
+          syncRunId,
+          itemId,
+          leagueId,
+          chaosValue,
+          source,
+          capturedAt,
+          createdAt
+        FROM ranked_prices
+        WHERE row_number = 1
+      `;
+      const result = await database
+        .prepare(query)
+        .bind(...itemIdChunk, ...leagueIdChunk)
+        .all<ItemPrice>();
+
+      for (const price of result.results) {
+        let pricesByLeague = pricesByItemAndLeague.get(price.itemId);
+        if (pricesByLeague === undefined) {
+          pricesByLeague = new Map();
+          pricesByItemAndLeague.set(price.itemId, pricesByLeague);
+        }
+        pricesByLeague.set(price.leagueId, price);
+      }
+    }
+  }
+
+  return [...pricesByItemAndLeague.values()]
+    .flatMap((pricesByLeague) => [...pricesByLeague.values()])
+    .sort(
+    (left, right) =>
+      compareStrings(left.itemId, right.itemId) ||
+      compareStrings(left.leagueId, right.leagueId)
+    );
+};
+
+export const findPricesBySyncRun = async (
+  database: D1Database,
+  syncRunId: string,
+  itemIds: readonly string[],
+  leagueId: string
+): Promise<ItemPrice[]> => {
+  const uniqueItemIds = [...new Set(itemIds)];
+  if (uniqueItemIds.length === 0) return [];
+
+  const rows: ItemPrice[] = [];
+  for (const itemIdChunk of chunk(uniqueItemIds, MAX_QUERY_BINDINGS - 2)) {
+    const placeholders = itemIdChunk.map(() => "?").join(", ");
+    const result = await database
+      .prepare(
+        `SELECT
+          id,
+          sync_run_id AS syncRunId,
+          item_id AS itemId,
+          league_id AS leagueId,
+          chaos_value AS chaosValue,
+          source,
+          captured_at AS capturedAt,
+          created_at AS createdAt
+        FROM item_prices
+        WHERE sync_run_id = ?
+          AND league_id = ?
+          AND item_id IN (${placeholders})`
+      )
+      .bind(syncRunId, leagueId, ...itemIdChunk)
+      .all<ItemPrice>();
+    rows.push(...result.results);
+  }
+
+  return rows.sort((left, right) => compareStrings(left.itemId, right.itemId));
+};
+
+export const findLatestItemPrice = async (
+  db: Database,
+  itemId: string,
+  leagueId: string
+) => {
+  const rows = await db
+    .select()
+    .from(itemPrices)
+    .where(and(eq(itemPrices.itemId, itemId), eq(itemPrices.leagueId, leagueId)))
+    .orderBy(desc(itemPrices.capturedAt), desc(itemPrices.id))
+    .limit(1);
+  return rows[0] ?? null;
+};
+
+export const findLatestPrices = async (
+  db: Database,
+  itemIds: readonly string[],
+  leagueId: string
+) => {
+  const uniqueIds = [...new Set(itemIds)];
+  const rows = await Promise.all(
+    uniqueIds.map((itemId) => findLatestItemPrice(db, itemId, leagueId))
+  );
+  return rows.filter((row): row is NonNullable<typeof row> => row !== null);
+};
+
+export const insertItemPrices = async (
+  db: Database,
+  prices: readonly NewItemPrice[]
+): Promise<number> => {
+  if (prices.length === 0) return 0;
+  const inserts = chunk(prices, MAX_INSERT_ROWS).map((priceChunk) =>
+    db.insert(itemPrices).values(priceChunk)
+  );
+  await db.batch(
+    inserts as [typeof inserts[number], ...Array<typeof inserts[number]>]
+  );
+  return prices.length;
+};

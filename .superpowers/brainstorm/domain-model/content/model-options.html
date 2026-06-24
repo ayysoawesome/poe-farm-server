@@ -1,0 +1,57 @@
+<h2>Модель боссов, проходок и дропа</h2>
+<p class="subtitle">Три варианта хранения. Рекомендация — B: она отражает предметную область без лишней сущности «проходка».</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:18px;font-family:monospace;line-height:1.7">
+      BOSS ──&lt; ENTRY_COMPONENT &gt;── ITEM<br>
+      BOSS ──&lt; DROP &gt;───────────── ITEM
+    </div>
+    <div class="card-body">
+      <h3>A. Минимальная корректировка</h3>
+      <p>Оставить текущие boss_entry_costs и boss_drops, удалить isUber и разрешить dropRate = null.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:18px;font-family:monospace;line-height:1.7">
+      BOSS 1 ──&lt; BOSS_ENTRY_COMPONENT &gt;── 1 ITEM<br>
+      BOSS 1 ──&lt; BOSS_DROP ─────────────&gt; 1 ITEM<br>
+      ITEM 1 ──&lt; ITEM_PRICE &gt;────────── 1 LEAGUE
+    </div>
+    <div class="card-body">
+      <h3>B. Явная доменная модель — рекомендуется</h3>
+      <p>Компоненты входа и таблица дропа имеют чёткие ограничения уникальности. Цена компонентов возвращается отдельно, итог вычисляется сервисом.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:18px;font-family:monospace;line-height:1.7">
+      BOSS ── 1 ENTRY_SET ──&lt; ENTRY_COMPONENT &gt;── ITEM<br>
+      BOSS ────────────────&lt; DROP &gt;──────────── ITEM
+    </div>
+    <div class="card-body">
+      <h3>C. Отдельная сущность Entry Set</h3>
+      <p>Удобно для будущих альтернативных способов входа, но сейчас это лишняя таблица: у босса всегда ровно один способ.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Как работает рекомендуемый вариант</h3>
+  <div class="mockup">
+    <div class="mockup-header">Пример: Shaper</div>
+    <div class="mockup-body" style="font-family:monospace;line-height:1.8">
+      boss: Shaper<br>
+      entry:<br>
+      &nbsp;&nbsp;Phoenix × 1 → 12 chaos<br>
+      &nbsp;&nbsp;Minotaur × 1 → 14 chaos<br>
+      &nbsp;&nbsp;Chimera × 1 → 11 chaos<br>
+      &nbsp;&nbsp;Hydra × 1 → 13 chaos<br>
+      totalEntryCost: 50 chaos<br><br>
+      drops:<br>
+      &nbsp;&nbsp;Orb of Dominance → chance 18%<br>
+      &nbsp;&nbsp;Unknown unique → chance unknown, excluded from expected return
+    </div>
+  </div>
+</div>

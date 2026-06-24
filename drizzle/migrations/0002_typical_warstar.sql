@@ -1,0 +1,1 @@
+CREATE INDEX `item_prices_item_league_captured_id_idx` ON `item_prices` (`item_id`,`league_id`,`captured_at`,`id`);

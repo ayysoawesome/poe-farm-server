@@ -1,0 +1,34 @@
+{
+  "name": "poe-boss-profit-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy",
+    "cf:types": "wrangler types",
+    "cf:types:check": "wrangler types --check",
+    "cf:startup": "wrangler check startup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply poe-boss-profit --local",
+    "db:migrate:remote": "wrangler d1 migrations apply poe-boss-profit --remote",
+    "db:seed:local": "tsx src/db/seed.ts && wrangler d1 execute poe-boss-profit --local --file=drizzle/seed.sql"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.5",
+    "hono": "^4.10.4",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.16.18",
+    "@types/node": "^22.15.0",
+    "drizzle-kit": "^0.31.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.45.0"
+  },
+  "packageManager": "pnpm@10.20.0"
+}

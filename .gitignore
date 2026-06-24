@@ -1,0 +1,9 @@
+node_modules/
+.pnpm-store/
+.wrangler/
+.dev.vars
+dist/
+coverage/
+drizzle/seed.sql
+worker-startup.cpuprofile
+*.log

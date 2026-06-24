@@ -1,0 +1,140 @@
+import { env } from "cloudflare:workers";
+import { beforeEach, describe, expect, it } from "vitest";
+
+import { ProfitService } from "../src/services/profit.service";
+import type { Env } from "../src/env";
+import {
+  applyAllMigrations,
+  resetMigrationDatabase
+} from "./helpers/migrations";
+
+const testEnv = env as Env;
+
+const insertBaseFixtures = async () => {
+  const now = 1_000;
+  await env.DB.batch([
+    env.DB.prepare(
+      "INSERT INTO leagues (id, name, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+    ).bind("league-1", "League 1", 1, now, now),
+    env.DB.prepare(
+      "INSERT INTO bosses (id, name, slug, description, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("boss-1", "Boss 1", "boss-1", "Boss", 1, now, now),
+    env.DB.prepare(
+      "INSERT INTO bosses (id, name, slug, description, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("boss-without-entry", "Boss Without Entry", "boss-without-entry", "Boss", 1, now, now),
+    env.DB.prepare(
+      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+    ).bind("entry-a", "Entry A", "fragment", now, now),
+    env.DB.prepare(
+      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+    ).bind("entry-b", "Entry B", "fragment", now, now),
+    env.DB.prepare(
+      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+    ).bind("known", "Known", "equipment", now, now),
+    env.DB.prepare(
+      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+    ).bind("unknown", "Unknown", "equipment", now, now),
+    env.DB.prepare(
+      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+    ).bind("divine-orb", "Divine Orb", "currency", now, now)
+  ]);
+
+  await env.DB.batch([
+    env.DB.prepare(
+      "INSERT INTO boss_entry_components (id, boss_id, item_id, quantity, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
+    ).bind("entry-1", "boss-1", "entry-a", 1, now, now),
+    env.DB.prepare(
+      "INSERT INTO boss_entry_components (id, boss_id, item_id, quantity, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
+    ).bind("entry-2", "boss-1", "entry-b", 2, now, now),
+    env.DB.prepare(
+      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("drop-known", "boss-1", "known", 0.25, null, now, now),
+    env.DB.prepare(
+      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("drop-unknown", "boss-1", "unknown", null, null, now, now),
+    env.DB.prepare(
+      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("drop-empty-boss", "boss-without-entry", "known", 0.25, null, now, now)
+  ]);
+
+  await env.DB.batch([
+    env.DB.prepare(
+      "INSERT INTO sync_runs (id, type, status, started_at, finished_at, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("sync-selected", "full", "success", now, now, null, now),
+    env.DB.prepare(
+      "INSERT INTO sync_runs (id, type, status, started_at, finished_at, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("sync-other", "full", "success", now, now, null, now),
+    env.DB.prepare(
+      "INSERT INTO sync_runs (id, type, status, started_at, finished_at, message, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("sync-without-divine", "full", "success", now, now, null, now)
+  ]);
+
+  const prices = [
+    ["selected-entry-a", "sync-selected", "entry-a", 10],
+    ["selected-entry-b", "sync-selected", "entry-b", 20],
+    ["selected-known", "sync-selected", "known", 100],
+    ["selected-divine", "sync-selected", "divine-orb", 200],
+    ["other-entry-a", "sync-other", "entry-a", 999],
+    ["other-entry-b", "sync-other", "entry-b", 999],
+    ["other-known", "sync-other", "known", 999],
+    ["other-divine", "sync-other", "divine-orb", 100],
+    ["without-divine-entry-a", "sync-without-divine", "entry-a", 10],
+    ["without-divine-entry-b", "sync-without-divine", "entry-b", 20],
+    ["without-divine-known", "sync-without-divine", "known", 100]
+  ] as const;
+
+  await env.DB.batch(
+    prices.map(([id, syncRunId, itemId, chaosValue]) =>
+      env.DB.prepare(
+        "INSERT INTO item_prices (id, item_id, league_id, sync_run_id, chaos_value, source, captured_at, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+      ).bind(id, itemId, "league-1", syncRunId, chaosValue, "test", now, now)
+    )
+  );
+};
+
+describe.sequential("ProfitService snapshot creation", () => {
+  beforeEach(async () => {
+    await resetMigrationDatabase();
+    await applyAllMigrations();
+    await insertBaseFixtures();
+  });
+
+  it("creates a snapshot using only the selected synchronized price set", async () => {
+    const snapshot = await new ProfitService(testEnv).calculateAndStore(
+      "boss-1",
+      "league-1",
+      "sync-selected"
+    );
+
+    expect(snapshot).toMatchObject({
+      bossId: "boss-1",
+      leagueId: "league-1",
+      syncRunId: "sync-selected",
+      entryCostChaos: 50,
+      expectedReturnChaos: 25,
+      divineOrbChaosValue: 200,
+      isComplete: false,
+      unknownDropCount: 1
+    });
+  });
+
+  it("fails when the selected set has no Divine Orb price", async () => {
+    await expect(
+      new ProfitService(testEnv).calculateAndStore(
+        "boss-1",
+        "league-1",
+        "sync-without-divine"
+      )
+    ).rejects.toMatchObject({ code: "MISSING_DIVINE_ORB_PRICE" });
+  });
+
+  it("fails when an active boss has no entry components", async () => {
+    await expect(
+      new ProfitService(testEnv).calculateAndStore(
+        "boss-without-entry",
+        "league-1",
+        "sync-selected"
+      )
+    ).rejects.toMatchObject({ code: "BOSS_ENTRY_COMPONENTS_MISSING" });
+  });
+});

@@ -1,0 +1,2 @@
+CRON_SECRET=replace-with-a-local-secret
+PRICE_SYNC_PROVIDER=mock
