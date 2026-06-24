@@ -7,3 +7,5 @@ coverage/
 drizzle/seed.sql
 worker-startup.cpuprofile
 *.log
+.superpowers/
+.agents
