@@ -52,8 +52,8 @@ describe("calculateProfit", () => {
     expect(result.roiPercent).toBe(0);
   });
 
-  it("requires a price for a drop with a known chance", () => {
-    expect(() =>
+  it("marks a known-chance drop incomplete when its price is missing", () => {
+    expect(
       calculateProfit({
         ...baseInput,
         prices: new Map([
@@ -61,7 +61,26 @@ describe("calculateProfit", () => {
           ["entry-b", 20]
         ])
       })
-    ).toThrowError("Missing price for Known (known)");
+    ).toEqual({
+      entryCostChaos: 50,
+      expectedReturnChaos: 0,
+      expectedProfitChaos: -50,
+      roiPercent: -100,
+      isComplete: false,
+      unknownDropCount: 2
+    });
+  });
+
+  it("requires a price for an entry component", () => {
+    expect(() =>
+      calculateProfit({
+        ...baseInput,
+        prices: new Map([
+          ["entry-a", 10],
+          ["known", 100]
+        ])
+      })
+    ).toThrowError("Missing price for Entry B (entry-b)");
   });
 });
 

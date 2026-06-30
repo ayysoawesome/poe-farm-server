@@ -37,6 +37,8 @@ export const listBossDrops = (db: Database, bossId: string) =>
       itemName: items.name,
       itemCategory: items.category,
       dropRate: bossDrops.dropRate,
+      dropGroupId: bossDrops.dropGroupId,
+      dropGroupType: bossDrops.dropGroupType,
       notes: bossDrops.notes,
       createdAt: bossDrops.createdAt,
       updatedAt: bossDrops.updatedAt

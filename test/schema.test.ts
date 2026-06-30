@@ -14,6 +14,7 @@ import {
 const expectedCategories = [
   "currency",
   "fragment",
+  "divination_card",
   "equipment",
   "gem",
   "map",
@@ -68,6 +69,7 @@ describe("Drizzle schema constraints", () => {
     expect(columnNames(schema.bosses)).not.toContain("is_uber");
     expect(indexNames(schema.bosses)).toContain("bosses_slug_unique");
     expect(columnNames(schema.leagues)).toContain("external_name");
+    expect(columnNames(schema.leagues)).toContain("source");
   });
 
   it("defines poe.ninja item price mappings", () => {
@@ -104,6 +106,33 @@ describe("Drizzle schema constraints", () => {
     expect(foreignKeyTargets(table)).toContain("item_id->items(id)");
   });
 
+  it("defines manual item prices keyed by item and league", () => {
+    expect("manualItemPrices" in schema).toBe(true);
+    const table = (
+      schema as typeof schema & {
+        manualItemPrices: Parameters<typeof getTableConfig>[0];
+      }
+    ).manualItemPrices;
+
+    expect(getTableConfig(table).name).toBe("manual_item_prices");
+    expect(columnNames(table)).toEqual([
+      "id",
+      "item_id",
+      "league_id",
+      "chaos_value",
+      "notes",
+      "created_at",
+      "updated_at"
+    ]);
+    expect(indexNames(table)).toContain(
+      "manual_item_prices_item_league_unique"
+    );
+    expect(checkNames(table)).toContain("manual_item_prices_chaos_value_check");
+    expect(foreignKeyTargets(table)).toEqual(
+      expect.arrayContaining(["item_id->items(id)", "league_id->leagues(id)"])
+    );
+  });
+
   it("defines unique positive entry components", () => {
     expect("bossEntryComponents" in schema).toBe(true);
     const table = (
@@ -138,6 +167,8 @@ describe("Drizzle schema constraints", () => {
       "boss_id",
       "item_id",
       "drop_rate",
+      "drop_group_id",
+      "drop_group_type",
       "notes",
       "created_at",
       "updated_at"
@@ -145,7 +176,11 @@ describe("Drizzle schema constraints", () => {
     expect(indexNames(schema.bossDrops)).toContain(
       "boss_drops_boss_item_unique"
     );
+    expect(indexNames(schema.bossDrops)).toContain("boss_drops_group_idx");
     expect(checkNames(schema.bossDrops)).toContain("boss_drops_rate_check");
+    expect(checkNames(schema.bossDrops)).toContain(
+      "boss_drops_group_type_check"
+    );
   });
 
   it("ties non-negative prices and complete snapshots to sync runs", () => {
@@ -162,6 +197,27 @@ describe("Drizzle schema constraints", () => {
     );
     expect(indexNames(schema.itemPrices)).toContain(
       "item_prices_item_league_captured_id_idx"
+    );
+
+    expect("latestItemPrices" in schema).toBe(true);
+    const latestPrices = (
+      schema as typeof schema & {
+        latestItemPrices: Parameters<typeof getTableConfig>[0];
+      }
+    ).latestItemPrices;
+    expect(getTableConfig(latestPrices).name).toBe("latest_item_prices");
+    expect(columnNames(latestPrices)).toEqual([
+      "item_id",
+      "league_id",
+      "source",
+      "sync_run_id",
+      "chaos_value",
+      "captured_at",
+      "created_at",
+      "updated_at"
+    ]);
+    expect(checkNames(latestPrices)).toContain(
+      "latest_item_prices_chaos_value_check"
     );
 
     expect(columnNames(schema.profitSnapshots)).toEqual(
@@ -182,6 +238,39 @@ describe("Drizzle schema constraints", () => {
     expect(foreignKeyTargets(schema.profitSnapshots)).toContain(
       "sync_run_id->sync_runs(id)"
     );
+
+    expect("latestProfitSnapshots" in schema).toBe(true);
+    const latestSnapshots = (
+      schema as typeof schema & {
+        latestProfitSnapshots: Parameters<typeof getTableConfig>[0];
+      }
+    ).latestProfitSnapshots;
+    expect(getTableConfig(latestSnapshots).name).toBe(
+      "latest_profit_snapshots"
+    );
+    expect(columnNames(latestSnapshots)).toEqual([
+      "id",
+      "boss_id",
+      "league_id",
+      "sync_run_id",
+      "entry_cost_chaos",
+      "expected_return_chaos",
+      "expected_profit_chaos",
+      "roi_percent",
+      "divine_orb_chaos_value",
+      "is_complete",
+      "unknown_drop_count",
+      "calculated_at",
+      "created_at",
+      "updated_at"
+    ]);
+    expect(checkNames(latestSnapshots)).toEqual(
+      expect.arrayContaining([
+        "latest_profit_snapshots_divine_orb_chaos_value_check",
+        "latest_profit_snapshots_is_complete_check",
+        "latest_profit_snapshots_unknown_drop_count_check"
+      ])
+    );
   });
 });
 
@@ -196,9 +285,15 @@ describe.sequential("D1 schema constraint behavior", () => {
       `INSERT INTO items (
         id, name, category, created_at, updated_at
       ) VALUES ('item-1', 'Item', 'currency', 1, 1)`,
+      `INSERT INTO items (
+        id, name, category, created_at, updated_at
+      ) VALUES ('item-2', 'Item 2', 'currency', 1, 1)`,
+      `INSERT INTO items (
+        id, name, category, created_at, updated_at
+      ) VALUES ('item-3', 'Item 3', 'currency', 1, 1)`,
       `INSERT INTO leagues (
-        id, name, external_name, is_active, created_at, updated_at
-      ) VALUES ('league-1', 'League', 'Mercenaries', 1, 1, 1)`,
+        id, name, external_name, source, is_active, created_at, updated_at
+      ) VALUES ('league-1', 'League', 'Mercenaries', 'manual', 1, 1, 1)`,
       `INSERT OR IGNORE INTO sync_runs (
         id, type, status, started_at, created_at
       ) VALUES ('sync-1', 'price', 'success', 1, 1)`
@@ -275,6 +370,59 @@ describe.sequential("D1 schema constraint behavior", () => {
     ).rejects.toThrow();
   });
 
+  it("accepts public stash price mappings for filtered item searches", async () => {
+    await expect(
+      env.DB.prepare(
+        `INSERT INTO item_price_mappings (
+          id, item_id, provider, external_type, external_key,
+          is_active, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      )
+        .bind(
+          "mapping-trade",
+          "item-1",
+          "poe_public_stash",
+          "PublicStashSearch",
+          JSON.stringify({ name: "Watcher's Eye", identified: false }),
+          1,
+          1,
+          1
+        )
+        .run()
+    ).resolves.toBeDefined();
+  });
+
+  it("accepts manual price mappings and positive manual prices", async () => {
+    await env.DB.prepare(
+      `INSERT INTO item_price_mappings (
+        id, item_id, provider, external_type, external_key,
+        is_active, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+    )
+      .bind("mapping-manual", "item-1", "manual", "Manual", "item-1", 1, 1, 1)
+      .run();
+
+    await expect(
+      env.DB.prepare(
+        `INSERT INTO manual_item_prices (
+          id, item_id, league_id, chaos_value, notes, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?)`
+      )
+        .bind("manual-price", "item-1", "league-1", 123, "manual", 1, 1)
+        .run()
+    ).resolves.toBeDefined();
+
+    await expect(
+      env.DB.prepare(
+        `INSERT INTO manual_item_prices (
+          id, item_id, league_id, chaos_value, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?)`
+      )
+        .bind("manual-bad-price", "item-1", "league-1", -1, 1, 1)
+        .run()
+    ).rejects.toThrow();
+  });
+
   it("rejects duplicate entry components and drops", async () => {
     await env.DB.prepare(
       "INSERT INTO boss_entry_components (id, boss_id, item_id, quantity, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
@@ -290,15 +438,41 @@ describe.sequential("D1 schema constraint behavior", () => {
     ).rejects.toThrow();
 
     await env.DB.prepare(
-      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
+      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     )
-      .bind("drop-1", "boss-1", "item-1", null, 1, 1)
+      .bind("drop-1", "boss-1", "item-1", null, "group-1", "one_of", 1, 1)
       .run();
     await expect(
       env.DB.prepare(
         "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
       )
         .bind("drop-2", "boss-1", "item-1", 0.5, 1, 1)
+        .run()
+    ).rejects.toThrow();
+  });
+
+  it("accepts one-of drop groups and rejects incomplete or invalid groups", async () => {
+    await expect(
+      env.DB.prepare(
+        "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+      )
+        .bind("drop-grouped", "boss-1", "item-1", 0.5, "uber-elder-fragment", "one_of", 1, 1)
+        .run()
+    ).resolves.toBeDefined();
+
+    await expect(
+      env.DB.prepare(
+        "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+      )
+        .bind("drop-missing-type", "boss-1", "item-2", 0.5, "group-1", null, 1, 1)
+        .run()
+    ).rejects.toThrow();
+
+    await expect(
+      env.DB.prepare(
+        "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+      )
+        .bind("drop-invalid-type", "boss-1", "item-3", 0.5, "group-1", "independent", 1, 1)
         .run()
     ).rejects.toThrow();
   });
@@ -362,6 +536,45 @@ describe.sequential("D1 schema constraint behavior", () => {
     await expect(insertSnapshot("snapshot-unknown", 200, 0, -1)).rejects.toThrow();
     await expect(
       insertSnapshot("snapshot-fractional-unknown", 200, 0, 0.5)
+    ).rejects.toThrow();
+
+    await expect(
+      env.DB.prepare(
+        `INSERT INTO latest_item_prices (
+          item_id, league_id, source, sync_run_id, chaos_value,
+          captured_at, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      )
+        .bind("item-1", "league-1", "test", "sync-1", -1, 1, 1, 1)
+        .run()
+    ).rejects.toThrow();
+
+    await expect(
+      env.DB.prepare(
+        `INSERT INTO latest_profit_snapshots (
+          id, boss_id, league_id, sync_run_id, entry_cost_chaos,
+          expected_return_chaos, expected_profit_chaos, roi_percent,
+          divine_orb_chaos_value, is_complete, unknown_drop_count,
+          calculated_at, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      )
+        .bind(
+          "latest-snapshot-rate",
+          "boss-1",
+          "league-1",
+          "sync-1",
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        )
+        .run()
     ).rejects.toThrow();
   });
 });

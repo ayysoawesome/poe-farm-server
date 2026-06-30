@@ -5,6 +5,7 @@ import { idSchema } from "./common.schema";
 export const itemCategories = [
   "currency",
   "fragment",
+  "divination_card",
   "equipment",
   "gem",
   "map",

@@ -6,7 +6,7 @@ import {
   listBossDrops,
   listBossEntryComponents
 } from "../repositories/boss.repository";
-import { findPricesBySyncRun } from "../repositories/price.repository";
+import { findLatestPrices } from "../repositories/price.repository";
 import { findLatestProfitSnapshot } from "../repositories/profit.repository";
 import { toMoney } from "../schemas/money.schema";
 import { AppError } from "../utils/errors";
@@ -52,12 +52,7 @@ export class BossService {
       ...entryComponents.map((component) => component.itemId),
       ...drops.map((drop) => drop.itemId)
     ];
-    const itemPrices = await findPricesBySyncRun(
-      this.env.DB,
-      snapshot.syncRunId,
-      itemIds,
-      leagueId
-    );
+    const itemPrices = await findLatestPrices(this.env.DB, itemIds, leagueId);
     const prices = new Map(itemPrices.map((price) => [price.itemId, price.chaosValue]));
 
     return {
@@ -97,6 +92,8 @@ export class BossService {
             category: drop.itemCategory
           },
           dropRate: drop.dropRate,
+          dropGroupId: drop.dropGroupId,
+          dropGroupType: drop.dropGroupType,
           price:
             priceChaos === undefined
               ? null

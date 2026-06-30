@@ -2,7 +2,11 @@ import { z } from "zod";
 
 import { idSchema } from "./common.schema";
 
-export const priceProviders = ["poe_ninja"] as const;
+export const priceProviders = [
+  "poe_ninja",
+  "poe_public_stash",
+  "manual"
+] as const;
 
 export const priceProviderSchema = z.enum(priceProviders);
 

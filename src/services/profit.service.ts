@@ -6,11 +6,11 @@ import {
   listBossDrops,
   listBossEntryComponents
 } from "../repositories/boss.repository";
-import { listActiveLeagues } from "../repositories/league.repository";
-import { findPricesBySyncRun } from "../repositories/price.repository";
+import { listActivePoeNinjaLeagues } from "../repositories/league.repository";
+import { findLatestPrices } from "../repositories/price.repository";
 import {
   findLatestProfitSnapshot,
-  insertProfitSnapshot
+  upsertLatestProfitSnapshot
 } from "../repositories/profit.repository";
 import {
   getCachedJson,
@@ -68,6 +68,11 @@ const requirePrice = (
   return price;
 };
 
+const isMissingPriceError = (error: unknown): boolean =>
+  error instanceof AppError &&
+  (error.code === "MISSING_DIVINE_ORB_PRICE" ||
+    error.code === "MISSING_ITEM_PRICE");
+
 export const calculateProfit = ({
   entryComponents,
   drops,
@@ -79,11 +84,20 @@ export const calculateProfit = ({
     0
   );
 
-  const unknownDropCount = drops.filter((drop) => drop.dropRate === null).length;
-  const expectedReturnChaos = drops.reduce((total, drop) => {
-    if (drop.dropRate === null) return total;
-    return total + drop.dropRate * requirePrice(prices, drop.itemId, drop.itemName);
-  }, 0);
+  let unknownDropCount = 0;
+  let expectedReturnChaos = 0;
+  for (const drop of drops) {
+    if (drop.dropRate === null) {
+      unknownDropCount += 1;
+      continue;
+    }
+    const price = prices.get(drop.itemId);
+    if (price === undefined) {
+      unknownDropCount += 1;
+      continue;
+    }
+    expectedReturnChaos += drop.dropRate * price;
+  }
 
   const expectedProfitChaos = expectedReturnChaos - entryCostChaos;
   const roiPercent =
@@ -122,12 +136,7 @@ export class ProfitService {
         .map((drop) => drop.itemId),
       DIVINE_ORB_ITEM_ID
     ];
-    const syncPrices = await findPricesBySyncRun(
-      this.env.DB,
-      syncRunId,
-      itemIds,
-      leagueId
-    );
+    const syncPrices = await findLatestPrices(this.env.DB, itemIds, leagueId);
     const prices = new Map(syncPrices.map((price) => [price.itemId, price.chaosValue]));
     const divineOrbChaosValue = prices.get(DIVINE_ORB_ITEM_ID);
     if (divineOrbChaosValue === undefined) {
@@ -156,7 +165,7 @@ export class ProfitService {
       calculatedAt: timestamp,
       createdAt: timestamp
     };
-    await insertProfitSnapshot(db, snapshot);
+    await upsertLatestProfitSnapshot(this.env.DB, snapshot);
     await setCachedJson(
       this.env.PROFIT_CACHE,
       profitCacheKey(leagueId, bossId),
@@ -169,13 +178,18 @@ export class ProfitService {
     const db = createDb(this.env.DB);
     const [activeBosses, activeLeagues] = await Promise.all([
       listActiveBosses(db),
-      listActiveLeagues(db)
+      listActivePoeNinjaLeagues(db)
     ]);
     let count = 0;
     for (const league of activeLeagues) {
       for (const boss of activeBosses) {
-        await this.calculateAndStore(boss.id, league.id, syncRunId);
-        count += 1;
+        try {
+          await this.calculateAndStore(boss.id, league.id, syncRunId);
+          count += 1;
+        } catch (error) {
+          if (isMissingPriceError(error)) continue;
+          throw error;
+        }
       }
     }
     return count;

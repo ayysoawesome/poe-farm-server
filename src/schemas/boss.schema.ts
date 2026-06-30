@@ -32,6 +32,8 @@ export const bossEntryComponentSchema = z.object({
 export const bossDropSchema = z.object({
   item: bossItemSchema,
   dropRate: z.number().min(0).max(1).nullable(),
+  dropGroupId: idSchema.nullable(),
+  dropGroupType: z.enum(["one_of"]).nullable(),
   price: moneySchema.nullable()
 });
 

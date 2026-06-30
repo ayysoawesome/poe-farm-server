@@ -85,6 +85,7 @@ describe.sequential("SyncService lease coordination", () => {
 
   it("releases the lease when full synchronization fails", async () => {
     const operationError = new Error("price synchronization failed");
+    vi.spyOn(SyncService.prototype, "syncLeagues").mockResolvedValue(2);
     vi.spyOn(SyncService.prototype, "syncPrices").mockImplementation(async () => {
       const lease = await env.DB.prepare(
         "SELECT owner_id FROM sync_leases WHERE name = ?"
@@ -108,6 +109,15 @@ describe.sequential("SyncService lease coordination", () => {
   });
 
   it("runs full synchronization without nested lease acquisition and releases on success", async () => {
+    const syncLeagues = vi.spyOn(SyncService.prototype, "syncLeagues").mockImplementation(async () => {
+      const lease = await env.DB.prepare(
+        "SELECT owner_id FROM sync_leases WHERE name = ?"
+      )
+        .bind("full-sync")
+        .first();
+      expect(lease).not.toBeNull();
+      return 2;
+    });
     const syncPrices = vi.spyOn(PriceService.prototype, "syncPrices").mockImplementation(async () => {
       const lease = await env.DB.prepare(
         "SELECT owner_id FROM sync_leases WHERE name = ?"
@@ -126,7 +136,11 @@ describe.sequential("SyncService lease coordination", () => {
       pricesInserted: 4,
       snapshotsCreated: 3
     });
+    expect(syncLeagues).toHaveBeenCalledTimes(1);
     expect(syncPrices).toHaveBeenCalledWith(result.syncRunId);
+    expect(syncLeagues.mock.invocationCallOrder[0]).toBeLessThan(
+      syncPrices.mock.invocationCallOrder[0] ?? 0
+    );
     expect(recalculateAll).toHaveBeenCalledWith(result.syncRunId);
 
     const lease = await env.DB.prepare(
@@ -139,6 +153,7 @@ describe.sequential("SyncService lease coordination", () => {
 
   it("keeps an operation error primary and structured-logs a simultaneous release failure", async () => {
     const operationError = new Error("operation failed");
+    vi.spyOn(SyncService.prototype, "syncLeagues").mockResolvedValue(2);
     vi.spyOn(SyncService.prototype, "syncPrices").mockImplementation(async () => {
       await env.DB.prepare("DROP TABLE sync_leases").run();
       throw operationError;
@@ -156,6 +171,7 @@ describe.sequential("SyncService lease coordination", () => {
 
   it("keeps the sync error primary and structured-logs failed-status recording failure", async () => {
     const operationError = new Error("price sync failed");
+    vi.spyOn(SyncService.prototype, "syncLeagues").mockResolvedValue(2);
     vi.spyOn(SyncService.prototype, "syncPrices").mockImplementation(async () => {
       await env.DB.prepare("DROP TABLE sync_runs").run();
       throw operationError;

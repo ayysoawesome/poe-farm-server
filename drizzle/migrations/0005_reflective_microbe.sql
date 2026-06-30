@@ -1,0 +1,1 @@
+ALTER TABLE `leagues` ADD `source` text DEFAULT 'manual' NOT NULL;

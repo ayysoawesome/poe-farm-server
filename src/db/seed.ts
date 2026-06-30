@@ -124,7 +124,7 @@ const divineOrbChaosValue =
 
 const statements: string[] = [
   "PRAGMA foreign_keys = ON;",
-  `INSERT OR IGNORE INTO leagues (id, name, external_name, is_active, created_at, updated_at) VALUES ('${leagueId}', 'Current League', ${sqlString(leagueExternalName)}, 1, ${timestamp}, ${timestamp});`,
+  `INSERT OR IGNORE INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES ('${leagueId}', 'Current League', ${sqlString(leagueExternalName)}, 'manual', 1, ${timestamp}, ${timestamp});`,
   `INSERT OR IGNORE INTO sync_runs (id, type, status, started_at, finished_at, message, created_at) VALUES (${sqlString(syncRunId)}, 'seed', 'success', ${timestamp}, ${timestamp}, 'Seed price set', ${timestamp});`
 ];
 

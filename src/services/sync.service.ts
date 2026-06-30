@@ -21,6 +21,10 @@ const SYNC_LEASE_DURATION_MS = 15 * 60 * 1_000;
 export class SyncService {
   constructor(private readonly env: Env) {}
 
+  syncLeagues(): Promise<number> {
+    return new PriceService(this.env).syncLeagues();
+  }
+
   syncPrices(syncRunId: string): Promise<number> {
     return new PriceService(this.env).syncPrices(syncRunId);
   }
@@ -55,7 +59,8 @@ export class SyncService {
       });
 
       try {
-        const pricesInserted = await this.syncPrices(syncRunId);
+        const leaguesSynced = await this.syncLeagues();
+        const pricesUpdated = await this.syncPrices(syncRunId);
         const snapshotsCreated = await new ProfitService(
           this.env
         ).recalculateAll(syncRunId);
@@ -64,9 +69,9 @@ export class SyncService {
           syncRunId,
           "success",
           nowMs(),
-          `Inserted ${pricesInserted} prices and created ${snapshotsCreated} snapshots`
+          `Synced ${leaguesSynced} leagues, updated ${pricesUpdated} latest prices and updated ${snapshotsCreated} latest snapshots`
         );
-        return { syncRunId, pricesInserted, snapshotsCreated };
+        return { syncRunId, pricesInserted: pricesUpdated, snapshotsCreated };
       } catch (error) {
         const message =
           error instanceof Error ? error.message : "Unknown sync failure";

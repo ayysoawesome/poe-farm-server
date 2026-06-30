@@ -1,6 +1,7 @@
 import { env } from "cloudflare:workers";
 import { beforeEach, describe, expect, it } from "vitest";
 
+import { BossService } from "../src/services/boss.service";
 import { ProfitService } from "../src/services/profit.service";
 import type { Env } from "../src/env";
 import {
@@ -14,8 +15,8 @@ const insertBaseFixtures = async () => {
   const now = 1_000;
   await env.DB.batch([
     env.DB.prepare(
-      "INSERT INTO leagues (id, name, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
-    ).bind("league-1", "League 1", 1, now, now),
+      "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind("league-1", "League 1", "League 1", "poe_ninja", 1, now, now),
     env.DB.prepare(
       "INSERT INTO bosses (id, name, slug, description, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
     ).bind("boss-1", "Boss 1", "boss-1", "Boss", 1, now, now),
@@ -47,8 +48,8 @@ const insertBaseFixtures = async () => {
       "INSERT INTO boss_entry_components (id, boss_id, item_id, quantity, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
     ).bind("entry-2", "boss-1", "entry-b", 2, now, now),
     env.DB.prepare(
-      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
-    ).bind("drop-known", "boss-1", "known", 0.25, null, now, now),
+      "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    ).bind("drop-known", "boss-1", "known", 0.25, "boss-1-one-of", "one_of", null, now, now),
     env.DB.prepare(
       "INSERT INTO boss_drops (id, boss_id, item_id, drop_rate, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
     ).bind("drop-unknown", "boss-1", "unknown", null, null, now, now),
@@ -90,6 +91,23 @@ const insertBaseFixtures = async () => {
       ).bind(id, itemId, "league-1", syncRunId, chaosValue, "test", now, now)
     )
   );
+
+  const latestPrices = [
+    ["entry-a", 10],
+    ["entry-b", 20],
+    ["known", 100],
+    ["divine-orb", 200]
+  ] as const;
+  await env.DB.batch(
+    latestPrices.map(([itemId, chaosValue]) =>
+      env.DB.prepare(
+        `INSERT INTO latest_item_prices (
+          item_id, league_id, source, sync_run_id, chaos_value,
+          captured_at, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      ).bind(itemId, "league-1", "test", "sync-selected", chaosValue, now, now, now)
+    )
+  );
 };
 
 describe.sequential("ProfitService snapshot creation", () => {
@@ -118,7 +136,29 @@ describe.sequential("ProfitService snapshot creation", () => {
     });
   });
 
+  it("returns drop group metadata in boss details", async () => {
+    await new ProfitService(testEnv).calculateAndStore(
+      "boss-1",
+      "league-1",
+      "sync-selected"
+    );
+
+    const detail = await new BossService(testEnv).getDetail("boss-1", "league-1");
+
+    expect(detail.drops).toContainEqual(
+      expect.objectContaining({
+        item: expect.objectContaining({ id: "known" }),
+        dropGroupId: "boss-1-one-of",
+        dropGroupType: "one_of"
+      })
+    );
+  });
+
   it("fails when the selected set has no Divine Orb price", async () => {
+    await env.DB.prepare(
+      "DELETE FROM latest_item_prices WHERE item_id = ? AND league_id = ?"
+    ).bind("divine-orb", "league-1").run();
+
     await expect(
       new ProfitService(testEnv).calculateAndStore(
         "boss-1",
@@ -126,6 +166,27 @@ describe.sequential("ProfitService snapshot creation", () => {
         "sync-without-divine"
       )
     ).rejects.toMatchObject({ code: "MISSING_DIVINE_ORB_PRICE" });
+  });
+
+  it("skips active leagues with missing mandatory prices during full recalculation", async () => {
+    const now = 1_000;
+    await env.DB.prepare(
+      "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    )
+      .bind("new-league", "New League", "New League", "poe_ninja", 1, now, now)
+      .run();
+    await env.DB.prepare("UPDATE bosses SET is_active = 0 WHERE id = ?")
+      .bind("boss-without-entry")
+      .run();
+
+    await expect(
+      new ProfitService(testEnv).recalculateAll("sync-selected")
+    ).resolves.toBe(1);
+
+    const snapshots = await env.DB.prepare(
+      "SELECT league_id AS leagueId FROM latest_profit_snapshots ORDER BY league_id"
+    ).all<{ leagueId: string }>();
+    expect(snapshots.results).toEqual([{ leagueId: "league-1" }]);
   });
 
   it("fails when an active boss has no entry components", async () => {
@@ -136,5 +197,26 @@ describe.sequential("ProfitService snapshot creation", () => {
         "sync-selected"
       )
     ).rejects.toMatchObject({ code: "BOSS_ENTRY_COMPONENTS_MISSING" });
+  });
+
+  it("recalculates snapshots only for active poe.ninja leagues", async () => {
+    const now = 1_000;
+    await env.DB.batch([
+      env.DB.prepare(
+        "UPDATE bosses SET is_active = 0 WHERE id = ?"
+      ).bind("boss-without-entry"),
+      env.DB.prepare(
+        "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("manual-league", "Manual League", "Manual League", "manual", 1, now, now)
+    ]);
+
+    await expect(
+      new ProfitService(testEnv).recalculateAll("sync-selected")
+    ).resolves.toBe(1);
+
+    const snapshots = await env.DB.prepare(
+      "SELECT league_id AS leagueId FROM latest_profit_snapshots ORDER BY league_id"
+    ).all<{ leagueId: string }>();
+    expect(snapshots.results).toEqual([{ leagueId: "league-1" }]);
   });
 });

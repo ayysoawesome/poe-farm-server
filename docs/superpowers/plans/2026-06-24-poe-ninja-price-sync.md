@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a poe.ninja-backed price synchronization pipeline with explicit item/provider mappings and league external names.
+**Goal:** Build a poe.ninja-backed price synchronization pipeline with explicit item/provider mappings and leagues synced from poe.ninja `economyLeagues`.
 
-**Architecture:** Curated game data remains in application-owned tables. Price sync loads active poe.ninja mappings per active league, fetches poe.ninja prices in batches grouped by external type, writes one coherent `item_prices` set per `sync_runs.id`, and then recalculates profit snapshots from that same set.
+**Architecture:** Curated item and boss data remains in application-owned tables. Price sync first refreshes active market leagues from poe.ninja `getindexstate.economyLeagues`, then loads active poe.ninja mappings per active synced league, fetches poe.ninja prices in batches grouped by external type, writes one coherent `item_prices` set per `sync_runs.id`, and recalculates profit snapshots from that same set.
 
 **Tech Stack:** TypeScript, Cloudflare Workers, Hono, D1, Drizzle ORM, Zod, Vitest, Wrangler, pnpm.
 
@@ -12,7 +12,7 @@
 
 ## File Structure
 
-- `src/db/schema.ts`: add `leagues.externalName` and `itemPriceMappings`.
+- `src/db/schema.ts`: add `leagues.externalName`, `leagues.source`, and `itemPriceMappings`.
 - `src/schemas/league.schema.ts`: expose `externalName`.
 - `src/schemas/item-price-mapping.schema.ts`: Zod schema and provider constants.
 - `src/repositories/item-price-mapping.repository.ts`: list active mappings by provider.
@@ -281,6 +281,44 @@ Implement `PoeNinjaPriceProvider`:
 - [ ] **Step 4: Run provider tests**
 
 Expected: provider tests pass.
+
+## Task 3.5: Sync poe.ninja economy leagues
+
+**Files:**
+- Modify: `src/services/price.service.ts`
+- Modify: `src/repositories/league.repository.ts`
+- Modify: `src/db/schema.ts`
+- Modify: `test/poe-ninja-price-provider.test.ts`
+- Create: `test/league.repository.test.ts`
+
+- [ ] **Step 1: Add failing provider test**
+
+Assert `PoeNinjaPriceProvider.fetchEconomyLeagues()` reads:
+
+```ts
+{
+  economyLeagues: [
+    { name: "Standard", displayName: "Standard" },
+    { name: "Mercenaries" }
+  ]
+}
+```
+
+and returns normalized league rows with ids `standard` and `mercenaries`.
+
+- [ ] **Step 2: Add failing repository test**
+
+Assert `syncPoeNinjaLeagues` upserts present leagues as active and deactivates
+missing rows where `source = 'poe_ninja'`.
+
+- [ ] **Step 3: Implement**
+
+Add `leagues.source` with default `manual`. Add provider method
+`fetchEconomyLeagues`. Add `syncPoeNinjaLeagues(database, leagues)`.
+
+- [ ] **Step 4: Wire orchestration**
+
+Call league sync before price sync inside `SyncService.runFullSync`.
 
 ## Task 4: Wire provider into price sync
 

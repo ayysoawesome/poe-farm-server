@@ -9,6 +9,7 @@ import { leaguesRoutes } from "./routes/leagues.routes";
 import { profitRoutes } from "./routes/profit.routes";
 import { syncRoutes } from "./routes/sync.routes";
 import { SyncService } from "./services/sync.service";
+import { openApiDocument, swaggerHtml } from "./openapi";
 import { AppError } from "./utils/errors";
 import { errorResponse } from "./utils/response";
 
@@ -21,6 +22,8 @@ app.route("/api/bosses", bossesRoutes);
 app.route("/api/items", itemsRoutes);
 app.route("/api/profit", profitRoutes);
 app.route("/internal", syncRoutes);
+app.get("/openapi.json", (context) => context.json(openApiDocument));
+app.get("/docs", (context) => context.html(swaggerHtml));
 
 app.notFound((context) =>
   errorResponse(context, "NOT_FOUND", "Route not found", 404)

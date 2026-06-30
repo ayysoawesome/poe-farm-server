@@ -1,0 +1,1012 @@
+[
+  {
+    "id": "a-fate-worse-than-death",
+    "name": "A Fate Worse Than Death",
+    "category": "divination_card",
+    "externalType": "DivinationCard",
+    "externalKey": "A Fate Worse Than Death",
+    "iconUrl": "https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png"
+  },
+  {
+    "id": "annihilation-support",
+    "name": "Annihilation Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Annihilation Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L09ibGl0ZXJhdGlvblN1cHBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZ2UiOnRydWV9XQ/b8374aaed8/ObliterationSupport.png"
+  },
+  {
+    "id": "annihilations-approach",
+    "name": "Annihilation's Approach",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Annihilation's Approach",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VYmVyU2VhcmluZ0V4YXJjaEJvb3QiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/705e9f657f/UberSearingExarchBoot.png"
+  },
+  {
+    "id": "archive-reliquary-key",
+    "name": "Archive Reliquary Key",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Archive Reliquary Key",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TZWFyaW5nRXhhcmNoRm9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/bb895c1f5d/SearingExarchFoil.png"
+  },
+  {
+    "id": "arns-anguish",
+    "name": "Arn's Anguish",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Arn's Anguish",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlU3RyIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/c07eed602e/AltChargeStr.png"
+  },
+  {
+    "id": "ashes-of-the-stars",
+    "name": "Ashes of the Stars",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Ashes of the Stars",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYXN0ZXJPZkdlbXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f6497cbdfe/MasterOfGems.png"
+  },
+  {
+    "id": "blazing-fragment",
+    "name": "Blazing Fragment",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Blazing Fragment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNlYXJpbmdFeGFyY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a005e1a684/UberBossKeySearingExarch.png"
+  },
+  {
+    "id": "auspicious-ambitions",
+    "name": "Auspicious Ambitions",
+    "category": "divination_card",
+    "externalType": "DivinationCard",
+    "externalKey": "Auspicious Ambitions",
+    "iconUrl": "https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png"
+  },
+  {
+    "id": "awakened-enhance-support",
+    "name": "Awakened Enhance Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Awakened Enhance Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL2VuaGFuY2VwbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d3de7b3bd1/enhanceplus.png"
+  },
+  {
+    "id": "awakened-enlighten-support",
+    "name": "Awakened Enlighten Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Awakened Enlighten Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VubGlnaHRlbnBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7ec7d0544d/Enlightenplus.png"
+  },
+  {
+    "id": "awakened-multistrike",
+    "name": "Awakened Multistrike Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Awakened Multistrike Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL011bHRpcGxlQXR0YWNrc1BsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c32ddc2121/MultipleAttacksPlus.png"
+  },
+  {
+    "id": "awakeners-orb",
+    "name": "Awakener's Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Awakener's Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVHJhbnNmZXJPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6db384ea6e/TransferOrb.png"
+  },
+  {
+    "id": "call-of-the-void",
+    "name": "Call of the Void",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Call of the Void",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRnJvc3RHbGF6ZWRFeWVSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e10b85c4f1/FrostGlazedEyeRing.png"
+  },
+  {
+    "id": "chaos-orb",
+    "name": "Chaos Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Chaos Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxSYXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d119a0d734/CurrencyRerollRare.png"
+  },
+  {
+    "id": "cosmic-reliquary-key",
+    "name": "Cosmic Reliquary Key",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Cosmic Reliquary Key",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaGFwZXJGb2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/71325272ad/ShaperFoil.png"
+  },
+  {
+    "id": "crown-of-the-inward-eye",
+    "name": "Crown of the Inward Eye",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Crown of the Inward Eye",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Nyb3duT2ZUaGVJbndhcmRFeWUiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/fdb20856e4/CrownOfTheInwardEye.png"
+  },
+  {
+    "id": "crystallised-omniscience",
+    "name": "Crystallised Omniscience",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Crystallised Omniscience",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Bc2NlbmRhbmNlQW11bGV0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/60368620d5/AscendanceAmulet.png"
+  },
+  {
+    "id": "curio-of-absorption",
+    "name": "Curio of Absorption",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Curio of Absorption",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RXhhcmNoIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0da90fe2d1/PinnacleFragmentExarch.png"
+  },
+  {
+    "id": "curio-of-consumption",
+    "name": "Curio of Consumption",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Curio of Consumption",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RWF0ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a386f18599/PinnacleFragmentEater.png"
+  },
+  {
+    "id": "curio-of-decay",
+    "name": "Curio of Decay",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Curio of Decay",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RWxkZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/40544dbcfb/PinnacleFragmentElder.png"
+  },
+  {
+    "id": "curio-of-potential",
+    "name": "Curio of Potential",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Curio of Potential",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50TWF2ZW4iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/53c751ef5d/PinnacleFragmentMaven.png"
+  },
+  {
+    "id": "dawnbreaker",
+    "name": "Dawnbreaker",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Dawnbreaker",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1N1cGVyaGVhdGVkU2hpZWxkIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/59e3552a9b/SuperheatedShield.png"
+  },
+  {
+    "id": "dawnstrider",
+    "name": "Dawnstrider",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Dawnstrider",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9JbmZlY3Rpb3VzQ29uc3RydWN0IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/bf1cb0a5b4/InfectiousConstruct.png"
+  },
+  {
+    "id": "decaying-reliquary-key",
+    "name": "Decaying Reliquary Key",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Decaying Reliquary Key",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9FbGRlckZvaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2c6d5b7eb2/ElderFoil.png"
+  },
+  {
+    "id": "devouring-fragment",
+    "name": "Devouring Fragment",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Devouring Fragment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVhdGVyT2ZXb3JsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/935c580d4c/UberBossKeyEaterOfWorlds.png"
+  },
+  {
+    "id": "disintegrator",
+    "name": "Disintegrator",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Disintegrator",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRWxkZXJTdGFmZiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/4d2bfda95c/ElderStaff.png"
+  },
+  {
+    "id": "dissolution-of-the-flesh",
+    "name": "Dissolution of the Flesh",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Dissolution of the Flesh",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1Jlc2VydmVkQmxvb2RKZXdlbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/1a4688f335/ReservedBloodJewel.png"
+  },
+  {
+    "id": "divine-orb",
+    "name": "Divine Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Divine Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png"
+  },
+  {
+    "id": "doppelg-nger-guise",
+    "name": "DoppelgГ¤nger Guise",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "DoppelgГ¤nger Guise",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Db2xsZWN0b3JzR2FyYkRpZmYiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/eb8a6d36ef/CollectorsGarbDiff.png"
+  },
+  {
+    "id": "dying-sun",
+    "name": "Dying Sun",
+    "category": "equipment",
+    "externalType": "UniqueFlask",
+    "externalKey": "Dying Sun",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU2hhcGVyc0ZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/c6e2f8118d/ShapersFlask.png"
+  },
+  {
+    "id": "echoes-of-creation",
+    "name": "Echoes of Creation",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Echoes of Creation",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1RoZVR3aXN0aW5nU2NyZWFtIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/4815fa0fc8/TheTwistingScream.png"
+  },
+  {
+    "id": "echoforge",
+    "name": "Echoforge",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Echoforge",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0Nvc21pY0ZvcmdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/df82c06267/CosmicForge.png"
+  },
+  {
+    "id": "eclipse-support",
+    "name": "Eclipse Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Eclipse Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0VjbGlwc2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZ2UiOnRydWV9XQ/01d4f8b241/Eclipse.png"
+  },
+  {
+    "id": "elders-exalted-orb",
+    "name": "Elder's Exalted Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Elder's Exalted Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvRWxkZXJFeGFsdGVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/233ff3fef0/ElderExaltedOrb.png"
+  },
+  {
+    "id": "eldritch-chaos-orb",
+    "name": "Eldritch Chaos Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Eldritch Chaos Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hDaGFvc09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/afdc1d40be/EldritchChaosOrb.png"
+  },
+  {
+    "id": "eldritch-exalted-orb",
+    "name": "Eldritch Exalted Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Eldritch Exalted Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hFeGFsdGVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/56026bffa3/EldritchExaltedOrb.png"
+  },
+  {
+    "id": "eldritch-orb-of-annulment",
+    "name": "Eldritch Orb of Annulment",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Eldritch Orb of Annulment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hBbm51bG1lbnRPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd03411d81/EldritchAnnulmentOrb.png"
+  },
+  {
+    "id": "entropic-devastation",
+    "name": "Entropic Devastation",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Entropic Devastation",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVWJlclNoYXBlckdsb3ZlcyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/50bd7171bf/UberShaperGloves.png"
+  },
+  {
+    "id": "exceptional-eldritch-ember",
+    "name": "Exceptional Eldritch Ember",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Exceptional Eldritch Ember",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2xlYW5zaW5nRmlyZU9yYlJhbms0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/920113641f/CleansingFireOrbRank4.png"
+  },
+  {
+    "id": "exceptional-eldritch-ichor",
+    "name": "Exceptional Eldritch Ichor",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Exceptional Eldritch Ichor",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFuZ2xlT3JiUmFuazQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1205e2c0a/TangleOrbRank4.png"
+  },
+  {
+    "id": "forbidden-flame",
+    "name": "Forbidden Flame",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Forbidden Flame",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1B1enpsZVBpZWNlSmV3ZWxfQ2xlYW5zaW5nRmlyZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ddfe57ac90/PuzzlePieceJewel_CleansingFire.png"
+  },
+  {
+    "id": "forbidden-flesh",
+    "name": "Forbidden Flesh",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Forbidden Flesh",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1B1enpsZVBpZWNlSmV3ZWxfR3JlYXRUYW5nbGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/9035b9ffd4/PuzzlePieceJewel_GreatTangle.png"
+  },
+  {
+    "id": "fragment-chimera",
+    "name": "Fragment of the Chimera",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of the Chimera",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRDaGltZXJhIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/df51d0bd7a/FragmentChimera.png"
+  },
+  {
+    "id": "fragment-hydra",
+    "name": "Fragment of the Hydra",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of the Hydra",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRIeWRyYSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/16cec8bced/FragmentHydra.png"
+  },
+  {
+    "id": "fragment-minotaur",
+    "name": "Fragment of the Minotaur",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of the Minotaur",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRNaW5vdGF1ciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a6307f6cc9/FragmentMinotaur.png"
+  },
+  {
+    "id": "fragment-phoenix",
+    "name": "Fragment of the Phoenix",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of the Phoenix",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRQaG9lbml4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bf64bb03f8/FragmentPhoenix.png"
+  },
+  {
+    "id": "grace-of-the-goddess",
+    "name": "Grace of the Goddess",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Grace of the Goddess",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9VYmVyTWF2ZW5XYW5kIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/1e06b23a5b/UberMavenWand.png"
+  },
+  {
+    "id": "gluttony-support",
+    "name": "Gluttony Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Gluttony Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0dsdXR0b255U3VwcG9ydCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/50841b2e02/GluttonySupport.png"
+  },
+  {
+    "id": "gravens-secret",
+    "name": "Graven's Secret",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Graven's Secret",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlSW50IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/1300aed2ac/AltChargeInt.png"
+  },
+  {
+    "id": "hands-of-the-high-templar",
+    "name": "Hands of the High Templar",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Hands of the High Templar",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvSGFuZHNPZlRoZUhpZ2hUZW1wbGFyIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/239b2df5cf/HandsOfTheHighTemplar.png"
+  },
+  {
+    "id": "impossible-escape",
+    "name": "Impossible Escape",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Impossible Escape",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL01pbmRib3JlUGVhcmwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/367683a1bb/MindborePearl.png"
+  },
+  {
+    "id": "incandescent-invitation",
+    "name": "Incandescent Invitation",
+    "category": "fragment",
+    "externalType": "Invitation",
+    "externalKey": "Incandescent Invitation",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9DbGVhbnNpbmdGaXJlT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e6f9234053/CleansingFireOrbQuest5.png"
+  },
+  {
+    "id": "impresence-chaos",
+    "name": "Impresence (Chaos)",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "impresence-chaos-onyx-amulet",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckNoYW9zIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fae9c0f072/ElderChaos.png"
+  },
+  {
+    "id": "impresence-physical",
+    "name": "Impresence (Physical)",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "impresence-physical-onyx-amulet",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlclBoeXNpY2FsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b41e1bdcc9/ElderPhysical.png"
+  },
+  {
+    "id": "impresence-cold",
+    "name": "Impresence (Cold)",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "impresence-cold-onyx-amulet",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckNvbGQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/157b678ffb/ElderCold.png"
+  },
+  {
+    "id": "impresence-lightning",
+    "name": "Impresence (Lightning)",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "impresence-lightning-onyx-amulet",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckxpZ2h0bmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/371ac0eb40/ElderLightning.png"
+  },
+  {
+    "id": "impresence-fire",
+    "name": "Impresence (Fire)",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "impresence-fire-onyx-amulet",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckZpcmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b863d024fe/ElderFire.png"
+  },
+  {
+    "id": "indigon",
+    "name": "Indigon",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Indigon",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ViZXJFbGRlckhlbG1ldCIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/005bcc2179/UberElderHelmet.png"
+  },
+  {
+    "id": "inextricable-fate",
+    "name": "Inextricable Fate",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Inextricable Fate",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9WaW5lZ3Jhc3BCb290c1VuaXF1ZSIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/4f56e4bdb0/VinegraspBootsUnique.png"
+  },
+  {
+    "id": "invert-the-rules-support",
+    "name": "Invert the Rules Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Invert the Rules Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0ludmVydHRoZVJ1bGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImdlIjp0cnVlfV0/0f08d4a859/InverttheRules.png"
+  },
+  {
+    "id": "legacy-of-fury",
+    "name": "Legacy of Fury",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Legacy of Fury",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9TY29yY2hlZEVhcnRoIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/fda63f7588/ScorchedEarth.png"
+  },
+  {
+    "id": "mark-of-the-elder",
+    "name": "Mark of the Elder",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Mark of the Elder",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckVsZGVyUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d211f75615/UberElderRing.png"
+  },
+  {
+    "id": "mark-of-the-shaper",
+    "name": "Mark of the Shaper",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Mark of the Shaper",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlclNoYXBlclJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/302889cfca/UberShaperRing.png"
+  },
+  {
+    "id": "mavens-writ",
+    "name": "Maven's Writ",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Maven's Writ",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXRsYXMvTWF2ZW5LZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ad4c12144c/MavenKey.png"
+  },
+  {
+    "id": "melding-of-the-flesh",
+    "name": "Melding of the Flesh",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Melding of the Flesh",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0VudGFuZ2xlZEVsZW1lbnRzSmV3ZWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/781ab651c4/EntangledElementsJewel.png"
+  },
+  {
+    "id": "nimis",
+    "name": "Nimis",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Nimis",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckVhdGVyb2ZXb3JsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6dbfb1baea/UberEaterofWorlds.png"
+  },
+  {
+    "id": "olesyas-delight",
+    "name": "Olesya's Delight",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Olesya's Delight",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlRGV4IiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlbGljIjowfV0/5f83eaba26/AltChargeDex.png"
+  },
+  {
+    "id": "overheat-support",
+    "name": "Overheat Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Overheat Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L092ZXJoZWF0U3VwcG9ydCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/b74bfe9994/OverheatSupport.png"
+  },
+  {
+    "id": "orb-dominance",
+    "name": "Orb of Dominance",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Orb of Dominance",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5PcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8396ed7d8d/MavenOrb.png"
+  },
+  {
+    "id": "orb-of-conflict",
+    "name": "Orb of Conflict",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Orb of Conflict",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ29uZmxpY3RPcmJSYW5rMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e1919976c3/ConflictOrbRank1.png"
+  },
+  {
+    "id": "oriaths-end",
+    "name": "Oriath's End",
+    "category": "equipment",
+    "externalType": "UniqueFlask",
+    "externalKey": "Oriath's End",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVWJlclNpcnVzRmxhc2siLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8758d70627/UberSirusFlask.png"
+  },
+  {
+    "id": "oubliette-reliquary-key",
+    "name": "Oubliette Reliquary Key",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Oubliette Reliquary Key",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaXJ1c0ZvaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7e611a9eb0/SirusFoil.png"
+  },
+  {
+    "id": "progenesis",
+    "name": "Progenesis",
+    "category": "equipment",
+    "externalType": "UniqueFlask",
+    "externalKey": "Progenesis",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVWJlck1hdmVuRmxhc2siLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/1883213ee8/UberMavenFlask.png"
+  },
+  {
+    "id": "ravenous-passion",
+    "name": "Ravenous Passion",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Ravenous Passion",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ViZXJFYXRlcm9mV29ybGRzSGVsbWV0IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/2215119a51/UberEaterofWorldsHelmet.png"
+  },
+  {
+    "id": "shapers-exalted-orb",
+    "name": "Shaper's Exalted Orb",
+    "category": "currency",
+    "externalType": "Currency",
+    "externalKey": "Shaper's Exalted Orb",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvU2hhcGVyRXhhbHRlZE9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ca4ad1f9eb/ShaperExaltedOrb.png"
+  },
+  {
+    "id": "shapers-touch",
+    "name": "Shaper's Touch",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Shaper's Touch",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvU2hhcGVyc0dsb3ZlcyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/633aead741/ShapersGloves.png"
+  },
+  {
+    "id": "screaming-invitation",
+    "name": "Screaming Invitation",
+    "category": "fragment",
+    "externalType": "Invitation",
+    "externalKey": "Screaming Invitation",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9UYW5nbGVkT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/75de691c2b/TangledOrbQuest5.png"
+  },
+  {
+    "id": "shiny-reliquary-key",
+    "name": "Shiny Reliquary Key",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Shiny Reliquary Key",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9NYXZlbkZvaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/114c341a3c/MavenFoil.png"
+  },
+  {
+    "id": "solstice-vigil",
+    "name": "Solstice Vigil",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Solstice Vigil",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TaGFwZXJzUHJlc2VuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/57d45e4009/ShapersPresence.png"
+  },
+  {
+    "id": "soul-ascension",
+    "name": "Soul Ascension",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Soul Ascension",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvU291bEFzY2Vuc2lvbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWxpYyI6MH1d/1a968d4cec/SoulAscension.png"
+  },
+  {
+    "id": "starforge",
+    "name": "Starforge",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Starforge",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1N0YXJmb3JnZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/86b81685e1/Starforge.png"
+  },
+  {
+    "id": "sublime-vision",
+    "name": "Sublime Vision",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Sublime Vision",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1N1YmxpbWVWaXNpb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ecd19a7f80/SublimeVision.png"
+  },
+  {
+    "id": "the-annihilating-light",
+    "name": "The Annihilating Light",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "The Annihilating Light",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSW50cmVwaWR1c0RvbG9yZW0iLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVsaWMiOjV9XQ/2d2a309c80/IntrepidusDolorem.png"
+  },
+  {
+    "id": "the-burden-of-truth",
+    "name": "The Burden of Truth",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "The Burden of Truth",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU2lydXNCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/757f213691/SirusBelt.png"
+  },
+  {
+    "id": "the-celestial-brace",
+    "name": "The Celestial Brace",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "The Celestial Brace",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVWJlclNlYXJpbmdFeGFyY2hHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/47d365fea7/UberSearingExarchGloves.png"
+  },
+  {
+    "id": "the-devourer-of-minds",
+    "name": "The Devourer of Minds",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "The Devourer of Minds",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ViZXJFbGRlckhlbG0iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/1b4e79354b/UberElderHelm.png"
+  },
+  {
+    "id": "the-eternity-shroud",
+    "name": "The Eternity Shroud",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "The Eternity Shroud",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9NYW50bGVPZkRpc21hbnRsaW5nIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/166d15bbe2/MantleOfDismantling.png"
+  },
+  {
+    "id": "the-gluttonous-tide",
+    "name": "The Gluttonous Tide",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "The Gluttonous Tide",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0ZyZW56aWVkVGVudGFjbGVzIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/6dc3218af0/FrenziedTentacles.png"
+  },
+  {
+    "id": "the-saviour",
+    "name": "The Saviour",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "The Saviour",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL01pcmFnZUJsYWRlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlbGljIjo3fV0/cddb35c052/MirageBlade.png"
+  },
+  {
+    "id": "the-tempest-rising",
+    "name": "The Tempest Rising",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "The Tempest Rising",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VYmVyU2lydXNCb290cyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/587f0ef638/UberSirusBoots.png"
+  },
+  {
+    "id": "the-tides-of-time",
+    "name": "The Tides of Time",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "The Tides of Time",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVWJlclNoYXBlckJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/7a326845e7/UberShaperBelt.png"
+  },
+  {
+    "id": "thread-of-hope",
+    "name": "Thread of Hope",
+    "category": "equipment",
+    "externalType": "UniqueJewel",
+    "externalKey": "Thread of Hope",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0Nvbm5lY3RlZEpld2VsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1d2c1f698a/ConnectedJewel.png"
+  },
+  {
+    "id": "viridis-veil",
+    "name": "Viridi's Veil",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Viridi's Veil",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0NvbnN0cmljdGluZ0Nyb3duIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/04ee655ca5/ConstrictingCrown.png"
+  },
+  {
+    "id": "visceral-reliquary-key",
+    "name": "Visceral Reliquary Key",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Visceral Reliquary Key",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9FYXRlck9mV29ybGRzRm9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b57140936b/EaterOfWorldsFoil.png"
+  },
+  {
+    "id": "void-of-the-elements",
+    "name": "Void of the Elements",
+    "category": "divination_card",
+    "externalType": "DivinationCard",
+    "externalKey": "Void of the Elements",
+    "iconUrl": "https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png"
+  },
+  {
+    "id": "voidfletcher",
+    "name": "Voidfletcher",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Voidfletcher",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9FbGRhclF1aXZlciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/5b04f2a291/EldarQuiver.png"
+  },
+  {
+    "id": "voidforge",
+    "name": "Voidforge",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Voidforge",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1N0YXJmb3JnZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/86b81685e1/Starforge.png"
+  },
+  {
+    "id": "voidwalker",
+    "name": "Voidwalker",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Voidwalker",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Dcm9zc2luZ1RoZVZvaWQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/f3747eb0f4/CrossingTheVoid.png"
+  },
+  {
+    "id": "al-hezmin-crest",
+    "name": "Al-Hezmin's Crest",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Al-Hezmin's Crest",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9IdW50ZXJGcmFnbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4a1c79a0f7/HunterFragment.png"
+  },
+  {
+    "id": "awakening-fragment",
+    "name": "Awakening Fragment",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Awakening Fragment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNpcnVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2d2c405857/UberBossKeySirus.png"
+  },
+  {
+    "id": "awakened-empower-support",
+    "name": "Awakened Empower Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Awakened Empower Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VtcG93ZXJQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/eb0e6f91ed/EmpowerPlus.png"
+  },
+  {
+    "id": "barans-crest",
+    "name": "Baran's Crest",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Baran's Crest",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9DcnVzYWRlckZyYWdtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/83e0f167f2/CrusaderFragment.png"
+  },
+  {
+    "id": "blasphemers-grasp",
+    "name": "Blasphemer's Grasp",
+    "category": "equipment",
+    "externalType": "UniqueArmour",
+    "externalKey": "Blasphemer's Grasp",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvRWxkZXJHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/dda114f6f9/ElderGloves.png"
+  },
+  {
+    "id": "cooldown-recovery-support",
+    "name": "Cooldown Recovery Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Cooldown Recovery Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0Nvb2xkb3duUmVjb3ZlcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZ2UiOnRydWV9XQ/21c017b506/CooldownRecovery.png"
+  },
+  {
+    "id": "cosmic-fragment",
+    "name": "Cosmic Fragment",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Cosmic Fragment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNoYXBlciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d5ef574938/UberBossKeyShaper.png"
+  },
+  {
+    "id": "cyclopean-coil",
+    "name": "Cyclopean Coil",
+    "category": "equipment",
+    "externalType": "UniqueAccessory",
+    "externalKey": "Cyclopean Coil",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRWxkZXJCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/f565e25e57/ElderBelt.png"
+  },
+  {
+    "id": "decaying-fragment",
+    "name": "Decaying Fragment",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Decaying Fragment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVsZGVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/dffa4053b9/UberBossKeyElder.png"
+  },
+  {
+    "id": "droxs-crest",
+    "name": "Drox's Crest",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Drox's Crest",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9XYXJsb3JkRnJhZ21lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/863882aba2/WarlordFragment.png"
+  },
+  {
+    "id": "eldritch-blasphemy-support",
+    "name": "Eldritch Blasphemy Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Eldritch Blasphemy Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0F1cmlmeSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/35e0f624bb/Aurify.png"
+  },
+  {
+    "id": "fragment-of-constriction",
+    "name": "Fragment of Constriction",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Constriction",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuSG9seSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ade615a113/AtlasMapGuardianHoly.png"
+  },
+  {
+    "id": "fragment-of-emptiness",
+    "name": "Fragment of Emptiness",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Emptiness",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ced2590995/UberElder02.png"
+  },
+  {
+    "id": "fragment-of-enslavement",
+    "name": "Fragment of Enslavement",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Enslavement",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuRmlyZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6327dee00e/AtlasMapGuardianFire.png"
+  },
+  {
+    "id": "fragment-of-eradication",
+    "name": "Fragment of Eradication",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Eradication",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuTGlnaHRuaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/22a9d1257c/AtlasMapGuardianLightning.png"
+  },
+  {
+    "id": "fragment-of-knowledge",
+    "name": "Fragment of Knowledge",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Knowledge",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4a2bab8955/UberElder04.png"
+  },
+  {
+    "id": "fragment-of-purification",
+    "name": "Fragment of Purification",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Purification",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuQ2hhb3MiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/767832e457/AtlasMapGuardianChaos.png"
+  },
+  {
+    "id": "fragment-of-shape",
+    "name": "Fragment of Shape",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Shape",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwMyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/dd71531c9f/UberElder03.png"
+  },
+  {
+    "id": "fragment-of-terror",
+    "name": "Fragment of Terror",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Fragment of Terror",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/061cd63c5e/UberElder01.png"
+  },
+  {
+    "id": "hopeshredder",
+    "name": "Hopeshredder",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Hopeshredder",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0VsZGVyQm93IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/537ee088f0/ElderBow.png"
+  },
+  {
+    "id": "nebuloch",
+    "name": "Nebuloch",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Nebuloch",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRWxkZXJNYWNlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/f381b102f8/ElderMace.png"
+  },
+  {
+    "id": "reality-fragment",
+    "name": "Reality Fragment",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Reality Fragment",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleU1hdmVuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1876f58c4b/UberBossKeyMaven.png"
+  },
+  {
+    "id": "shimmeron",
+    "name": "Shimmeron",
+    "category": "equipment",
+    "externalType": "UniqueWeapon",
+    "externalKey": "Shimmeron",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9FbGRlcldhbmQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/f941d5c543/ElderWand.png"
+  },
+  {
+    "id": "veritanias-crest",
+    "name": "Veritania's Crest",
+    "category": "fragment",
+    "externalType": "Fragment",
+    "externalKey": "Veritania's Crest",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9SZWRlZW1lckZyYWdtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/5416c38a70/RedeemerFragment.png"
+  },
+  {
+    "id": "void-shockwave-support",
+    "name": "Void Shockwave Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Void Shockwave Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1Nob2Nrd2F2ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/d342aa7321/Shockwave.png"
+  },
+  {
+    "id": "voidstorm-support",
+    "name": "Voidstorm Support",
+    "category": "gem",
+    "externalType": "SkillGem",
+    "externalKey": "Voidstorm Support",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1ZvaWRzdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/81b02defec/Voidstorm.png"
+  },
+  {
+    "id": "watchers-eye-unidentified-ilvl-85",
+    "name": "Watcher's Eye (Unidentified, ilvl 85)",
+    "category": "equipment",
+    "externalType": "Manual",
+    "externalKey": "watchers-eye-unidentified-ilvl-85",
+    "priceProvider": "manual",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0VsZGVySmV3ZWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/278c673716/ElderJewel.png"
+  },
+  {
+    "id": "watchers-eye-unidentified-ilvl-86-plus",
+    "name": "Watcher's Eye (Unidentified, ilvl 86+)",
+    "category": "equipment",
+    "externalType": "Manual",
+    "externalKey": "watchers-eye-unidentified-ilvl-86-plus",
+    "priceProvider": "manual",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0VsZGVySmV3ZWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/278c673716/ElderJewel.png"
+  }
+]

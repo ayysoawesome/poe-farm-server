@@ -14,7 +14,13 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply poe-boss-profit --local",
     "db:migrate:remote": "wrangler d1 migrations apply poe-boss-profit --remote",
-    "db:seed:local": "tsx src/db/seed.ts && wrangler d1 execute poe-boss-profit --local --file=drizzle/seed.sql"
+    "db:seed:local": "tsx src/db/seed.ts && wrangler d1 execute poe-boss-profit --local --file=drizzle/seed.sql",
+    "curated:build": "tsx src/db/import-curated.ts",
+    "curated:import:local": "tsx src/db/import-curated.ts && wrangler d1 execute poe-boss-profit --local --file=drizzle/curated.sql",
+    "curated:import:remote": "tsx src/db/import-curated.ts && wrangler d1 execute poe-boss-profit --remote --file=drizzle/curated.sql",
+    "items:icons:enrich": "tsx src/db/enrich-item-icons.ts",
+    "prod:sync:direct": "tsx src/db/sync-prod-direct.ts",
+    "curated:scrape:poewiki": "tsx src/db/scrape-poewiki-drops.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.44.5",

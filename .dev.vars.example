@@ -1,2 +1,6 @@
 CRON_SECRET=replace-with-a-local-secret
 PRICE_SYNC_PROVIDER=mock
+POE_API_USER_AGENT=OAuth poe-farm-server/0.1.0 (contact: replace-with-email)
+POE_API_TOKEN=
+POE_PUBLIC_STASH_CHANGE_ID=
+POE_PUBLIC_STASH_MAX_PAGES=1

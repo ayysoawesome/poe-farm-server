@@ -10,26 +10,37 @@ The application remains the source of truth for tracked bosses, tracked items, e
 
 Curated data lives in D1 tables:
 
-- `leagues`
 - `items`
 - `bosses`
 - `boss_entry_components`
 - `boss_drops`
 - `item_price_mappings`
 
-Market observations live in `item_prices` and are grouped by `sync_runs.id`.
+League metadata and market observations come from poe.ninja. Synced league
+metadata lives in `leagues`; market observations live in `item_prices` and are
+grouped by `sync_runs.id`.
 
 ## League mapping
 
-The public API can keep stable league IDs such as `current`, but poe.ninja requires the real league name. Add `leagues.external_name`.
+poe.ninja exposes available market leagues through
+`/api/data/getindexstate`. The sync uses the `economyLeagues` object from that
+response as the source of truth for active price leagues.
 
-Example:
+Each economy league is mapped as:
 
-- `id = current`
-- `name = Current League`
-- `external_name = Mercenaries`
+- `id = slugify(economyLeague.name)`
+- `name = economyLeague.displayName ?? economyLeague.name`
+- `external_name = economyLeague.name`
+- `source = poe_ninja`
+- `is_active = true`
 
-`external_name` is required for active leagues because price sync cannot call poe.ninja without it.
+Leagues previously synced from poe.ninja but no longer present in
+`economyLeagues` are marked inactive. Manual leagues are not modified by
+poe.ninja sync.
+
+No `current` alias is created by default. API callers should first request
+`GET /api/leagues`, then call profit/boss endpoints with a concrete league ID
+such as `standard` or the current league slug.
 
 ## Item price mappings
 
@@ -74,10 +85,12 @@ The provider should use `chaosEquivalent` where present. Chaos Orb is always sto
 `POST /internal/sync` continues to:
 
 1. Create a `sync_runs` row.
-2. Fetch prices for every active league.
-3. Insert all prices under the same `syncRunId`.
-4. Calculate profit snapshots from that same synchronized price set.
-5. Mark the run successful or failed.
+2. Fetch `economyLeagues` from poe.ninja index state.
+3. Upsert active poe.ninja leagues and deactivate missing poe.ninja leagues.
+4. Fetch prices for every active poe.ninja league.
+5. Insert all prices under the same `syncRunId`.
+6. Calculate profit snapshots from that same synchronized price set.
+7. Mark the run successful or failed.
 
 Fatal missing prices:
 

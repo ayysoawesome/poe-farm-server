@@ -6,7 +6,9 @@ import type { Env } from "../src/env";
 import {
   findPricesBySyncRun,
   findLatestPricesForItemsAndLeagues,
-  insertItemPrices
+  listManualItemPrices,
+  insertItemPrices,
+  upsertLatestItemPrices
 } from "../src/repositories/price.repository";
 import { PriceService } from "../src/services/price.service";
 
@@ -20,6 +22,20 @@ const createItemPricesTable = `
     source text NOT NULL,
     captured_at integer NOT NULL,
     created_at integer NOT NULL
+  )
+`;
+
+const createLatestItemPricesTable = `
+  CREATE TABLE IF NOT EXISTS latest_item_prices (
+    item_id text NOT NULL,
+    league_id text NOT NULL,
+    source text NOT NULL,
+    sync_run_id text NOT NULL,
+    chaos_value real NOT NULL,
+    captured_at integer NOT NULL,
+    created_at integer NOT NULL,
+    updated_at integer NOT NULL,
+    PRIMARY KEY (item_id, league_id, source)
   )
 `;
 
@@ -53,7 +69,20 @@ const createLeaguesTable = `
     id text PRIMARY KEY NOT NULL,
     name text NOT NULL,
     external_name text NOT NULL,
+    source text DEFAULT 'manual' NOT NULL,
     is_active integer DEFAULT true NOT NULL,
+    created_at integer NOT NULL,
+    updated_at integer NOT NULL
+  )
+`;
+
+const createManualItemPricesTable = `
+  CREATE TABLE IF NOT EXISTS manual_item_prices (
+    id text PRIMARY KEY NOT NULL,
+    item_id text NOT NULL,
+    league_id text NOT NULL,
+    chaos_value real NOT NULL,
+    notes text,
     created_at integer NOT NULL,
     updated_at integer NOT NULL
   )
@@ -96,6 +125,8 @@ const insertPrices = async (prices: readonly TestPrice[]) => {
 describe.sequential("price repository", () => {
   beforeEach(async () => {
     await env.DB.prepare(createItemPricesTable).run();
+    await env.DB.prepare(createLatestItemPricesTable).run();
+    await env.DB.prepare("DELETE FROM latest_item_prices").run();
     await env.DB.prepare("DELETE FROM item_prices").run();
   });
 
@@ -130,6 +161,77 @@ describe.sequential("price repository", () => {
       "SELECT COUNT(*) AS count FROM item_prices"
     ).first<{ count: number }>();
     expect(row?.count).toBe(13);
+  });
+
+  it("upserts only changed latest prices without appending price history", async () => {
+    const first = {
+      id: "price-a",
+      itemId: "item-a",
+      leagueId: "league-1",
+      syncRunId: "sync-a",
+      chaosValue: 10,
+      source: "test",
+      capturedAt: 100,
+      createdAt: 100
+    };
+
+    await expect(upsertLatestItemPrices(env.DB, [first])).resolves.toBe(1);
+    await expect(
+      upsertLatestItemPrices(env.DB, [
+        {
+          ...first,
+          id: "price-b",
+          syncRunId: "sync-b",
+          capturedAt: 200,
+          createdAt: 200
+        }
+      ])
+    ).resolves.toBe(0);
+    await expect(
+      upsertLatestItemPrices(env.DB, [
+        {
+          ...first,
+          id: "price-c",
+          syncRunId: "sync-c",
+          chaosValue: 12,
+          capturedAt: 300,
+          createdAt: 300
+        }
+      ])
+    ).resolves.toBe(1);
+
+    const latest = await env.DB.prepare(
+      `SELECT item_id AS itemId, league_id AS leagueId, source, sync_run_id AS syncRunId,
+        chaos_value AS chaosValue, captured_at AS capturedAt, created_at AS createdAt,
+        updated_at AS updatedAt
+       FROM latest_item_prices`
+    ).all<{
+      itemId: string;
+      leagueId: string;
+      source: string;
+      syncRunId: string;
+      chaosValue: number;
+      capturedAt: number;
+      createdAt: number;
+      updatedAt: number;
+    }>();
+    const historyCount = await env.DB.prepare(
+      "SELECT COUNT(*) AS count FROM item_prices"
+    ).first<{ count: number }>();
+
+    expect(latest.results).toEqual([
+      {
+        itemId: "item-a",
+        leagueId: "league-1",
+        source: "test",
+        syncRunId: "sync-c",
+        chaosValue: 12,
+        capturedAt: 300,
+        createdAt: 100,
+        updatedAt: 300
+      }
+    ]);
+    expect(historyCount?.count).toBe(0);
   });
 
   it("returns the latest price for every requested item and league pair", async () => {
@@ -423,7 +525,11 @@ describe.sequential("PriceService price loading", () => {
     await env.DB.prepare(createItemPriceMappingsTable).run();
     await env.DB.prepare(createLeaguesTable).run();
     await env.DB.prepare(createItemPricesTable).run();
+    await env.DB.prepare(createLatestItemPricesTable).run();
+    await env.DB.prepare(createManualItemPricesTable).run();
     await env.DB.prepare("DELETE FROM item_prices").run();
+    await env.DB.prepare("DELETE FROM latest_item_prices").run();
+    await env.DB.prepare("DELETE FROM manual_item_prices").run();
     await env.DB.prepare("DELETE FROM item_price_mappings").run();
     await env.DB.prepare("DELETE FROM items").run();
     await env.DB.prepare("DELETE FROM leagues").run();
@@ -441,11 +547,14 @@ describe.sequential("PriceService price loading", () => {
         "INSERT INTO item_price_mappings (id, item_id, provider, external_type, external_key, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
       ).bind("mapping-b", "item-b", "poe_ninja", "Currency", "Item B", 1, 1, 1),
       env.DB.prepare(
-        "INSERT INTO leagues (id, name, external_name, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
-      ).bind("league-1", "League 1", "League 1", 1, 1, 1),
+        "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("league-1", "League 1", "League 1", "poe_ninja", 1, 1, 1),
       env.DB.prepare(
-        "INSERT INTO leagues (id, name, external_name, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
-      ).bind("league-2", "League 2", "League 2", 1, 1, 1)
+        "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("league-2", "League 2", "League 2", "poe_ninja", 1, 1, 1),
+      env.DB.prepare(
+        "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("manual-league", "Manual League", "Manual League", "manual", 1, 1, 1)
     ]);
     await insertPrices([
       {
@@ -476,7 +585,7 @@ describe.sequential("PriceService price loading", () => {
     vi.restoreAllMocks();
   });
 
-  it("loads active mappings once and writes every mapped item for every active league", async () => {
+  it("loads active mappings by provider and writes latest prices without appending history", async () => {
     const prepareSpy = vi.spyOn(env.DB, "prepare");
 
     await expect(
@@ -490,14 +599,73 @@ describe.sequential("PriceService price loading", () => {
       const normalized = query.toLowerCase();
       return normalized.includes("from") && normalized.includes("item_price_mappings");
     });
-    expect(mappingSelects).toHaveLength(1);
-    const inserted = await env.DB.prepare(
+    expect(mappingSelects).toHaveLength(3);
+    const latest = await env.DB.prepare(
       `SELECT DISTINCT sync_run_id AS syncRunId, captured_at AS capturedAt
-       FROM item_prices
+       FROM latest_item_prices
        WHERE source = 'mock'`
     ).all<{ syncRunId: string; capturedAt: number }>();
-    expect(inserted.results).toHaveLength(1);
-    expect(inserted.results[0]?.syncRunId).toBe("sync-new");
+    const historyCount = await env.DB.prepare(
+      "SELECT COUNT(*) AS count FROM item_prices WHERE source = 'mock'"
+    ).first<{ count: number }>();
+    expect(latest.results).toHaveLength(1);
+    expect(latest.results[0]?.syncRunId).toBe("sync-new");
+    expect(historyCount?.count).toBe(0);
+  });
+
+  it("writes manual mapped prices from manual item prices into the sync run", async () => {
+    await env.DB.batch([
+      env.DB.prepare(
+        "INSERT INTO item_price_mappings (id, item_id, provider, external_type, external_key, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+      ).bind("mapping-manual", "item-b", "manual", "Manual", "item-b", 1, 1, 1),
+      env.DB.prepare(
+        "INSERT INTO manual_item_prices (id, item_id, league_id, chaos_value, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("manual-b-1", "item-b", "league-1", 55, "manual test", 1, 2)
+    ]);
+
+    await expect(
+      new PriceService({
+        ...(env as Env),
+        PRICE_SYNC_PROVIDER: "mock"
+      }).syncPrices("sync-manual")
+    ).resolves.toBe(5);
+
+    const manualPrice = await env.DB.prepare(
+      `SELECT item_id AS itemId, league_id AS leagueId, sync_run_id AS syncRunId, chaos_value AS chaosValue, source
+       FROM latest_item_prices
+       WHERE source = 'manual'`
+    ).first<{
+      itemId: string;
+      leagueId: string;
+      syncRunId: string;
+      chaosValue: number;
+      source: string;
+    }>();
+
+    expect(manualPrice).toEqual({
+      itemId: "item-b",
+      leagueId: "league-1",
+      syncRunId: "sync-manual",
+      chaosValue: 55,
+      source: "manual"
+    });
+  });
+
+  it("lists manual prices only for requested mappings and league", async () => {
+    await env.DB.batch([
+      env.DB.prepare(
+        "INSERT INTO manual_item_prices (id, item_id, league_id, chaos_value, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("manual-a", "item-a", "league-1", 11, null, 1, 1),
+      env.DB.prepare(
+        "INSERT INTO manual_item_prices (id, item_id, league_id, chaos_value, notes, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind("manual-b", "item-b", "league-2", 22, null, 1, 1)
+    ]);
+
+    await expect(
+      listManualItemPrices(createDb(env.DB), "league-1", ["item-a", "item-b"])
+    ).resolves.toMatchObject([
+      { itemId: "item-a", leagueId: "league-1", chaosValue: 11 }
+    ]);
   });
 
   it("looks up previous prices without delimiter-key collisions", async () => {
@@ -523,11 +691,11 @@ describe.sequential("PriceService price loading", () => {
         "INSERT INTO item_price_mappings (id, item_id, provider, external_type, external_key, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
       ).bind("mapping-delimiter-second", secondItemId, "poe_ninja", "Currency", "Second Item", 1, 1, 1),
       env.DB.prepare(
-        "INSERT INTO leagues (id, name, external_name, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
-      ).bind(firstLeagueId, "First League", firstLeagueId, 1, 1, 1),
+        "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind(firstLeagueId, "First League", firstLeagueId, "poe_ninja", 1, 1, 1),
       env.DB.prepare(
-        "INSERT INTO leagues (id, name, external_name, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
-      ).bind(secondLeagueId, "Second League", secondLeagueId, 1, 1, 1)
+        "INSERT INTO leagues (id, name, external_name, source, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      ).bind(secondLeagueId, "Second League", secondLeagueId, "poe_ninja", 1, 1, 1)
     ]);
     await insertPrices([
       {
@@ -559,7 +727,7 @@ describe.sequential("PriceService price loading", () => {
         league_id AS leagueId,
         sync_run_id AS syncRunId,
         chaos_value AS chaosValue
-      FROM item_prices
+      FROM latest_item_prices
       WHERE source = 'mock'`
     ).all<{
       itemId: string;

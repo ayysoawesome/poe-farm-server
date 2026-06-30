@@ -1,0 +1,1030 @@
+[
+  {
+    "id": "eater-of-worlds",
+    "name": "Eater of Worlds",
+    "slug": "eater-of-worlds",
+    "description": "The Eater of Worlds pinnacle encounter.",
+    "entryComponents": [
+      {
+        "itemId": "screaming-invitation",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "gluttony-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "eldritch-chaos-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "eldritch-exalted-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "eldritch-orb-of-annulment",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "exceptional-eldritch-ichor",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "inextricable-fate",
+        "dropRate": 0.55,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "melding-of-the-flesh",
+        "dropRate": 0.02,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "the-gluttonous-tide",
+        "dropRate": 0.43,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      }
+    ]
+  },
+  {
+    "id": "uber-eater-of-worlds",
+    "name": "Uber Eater of Worlds",
+    "slug": "uber-eater-of-worlds",
+    "description": "The Uber Eater of Worlds pinnacle encounter.",
+    "entryComponents": [
+      {
+        "itemId": "devouring-fragment",
+        "quantity": 4
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "gluttony-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "ashes-of-the-stars",
+        "dropRate": 0.3,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "curio-of-consumption",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "eldritch-chaos-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "eldritch-exalted-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "eldritch-orb-of-annulment",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "exceptional-eldritch-ichor",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "forbidden-flesh",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "nimis",
+        "dropRate": 0.02,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+
+      {
+        "itemId": "ravenous-passion",
+        "dropRate": 0.68,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+
+      {
+        "itemId": "visceral-reliquary-key",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      }
+    ]
+  },
+  {
+    "id": "exarch",
+    "name": "Exarch",
+    "slug": "exarch",
+    "description": "The Searing Exarch pinnacle encounter.",
+    "entryComponents": [
+      {
+        "itemId": "incandescent-invitation",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "overheat-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "auspicious-ambitions",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+
+      {
+        "itemId": "dawnbreaker",
+        "dropRate": 0.63,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "dawnstrider",
+        "dropRate": 0.35,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "dissolution-of-the-flesh",
+        "dropRate": 0.02,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "eldritch-chaos-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "eldritch-exalted-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "eldritch-orb-of-annulment",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "exceptional-eldritch-ember",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "forbidden-flame",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+
+      {
+        "itemId": "the-annihilating-light",
+        "dropRate": 0.455,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "the-celestial-brace",
+        "dropRate": 0.015,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      }
+    ]
+  },
+  {
+    "id": "uber-exarch",
+    "name": "Uber Exarch",
+    "slug": "uber-exarch",
+    "description": "The Uber Searing Exarch pinnacle encounter.",
+    "entryComponents": [
+      {
+        "itemId": "blazing-fragment",
+        "quantity": 4
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "overheat-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds"
+      },
+      {
+        "itemId": "annihilations-approach",
+        "dropRate": 0.29,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "archive-reliquary-key",
+        "dropRate": 0.015,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "auspicious-ambitions",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "crystallised-omniscience",
+        "dropRate": 0.24,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "curio-of-absorption",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+
+      {
+        "itemId": "eldritch-chaos-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "eldritch-exalted-orb",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "eldritch-orb-of-annulment",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "exceptional-eldritch-ember",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "forbidden-flame",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+
+      {
+        "itemId": "the-annihilating-light",
+        "dropRate": 0.455,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      },
+      {
+        "itemId": "the-celestial-brace",
+        "dropRate": 0.015,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch"
+      }
+    ]
+  },
+  {
+    "id": "maven",
+    "name": "Maven",
+    "slug": "maven",
+    "description": "The Maven pinnacle encounter.",
+    "entryComponents": [
+      {
+        "itemId": "mavens-writ",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "arns-anguish",
+        "dropRate": 0.17,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "auspicious-ambitions",
+        "dropRate": 0.0005,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "doppelg-nger-guise",
+        "dropRate": 0.07,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "echoforge",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "gravens-secret",
+        "dropRate": 0.17,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "invert-the-rules-support",
+        "dropRate": 0.1,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "legacy-of-fury",
+        "dropRate": 0.41,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "olesyas-delight",
+        "dropRate": 0.17,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "orb-of-conflict",
+        "dropRate": 0.32,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      }
+    ]
+  },
+  {
+    "id": "uber-maven",
+    "name": "Uber Maven",
+    "slug": "uber-maven",
+    "description": "The Uber Maven encounter.",
+    "entryComponents": [
+      {
+        "itemId": "reality-fragment",
+        "quantity": 4
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "auspicious-ambitions",
+        "dropRate": 0.0005,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "awakened-enhance-support",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "awakened-enlighten-support",
+        "dropRate": 0.005,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "awakened-empower-support",
+        "dropRate": 0.006,
+        "notes": "Mock MVP rate"
+      },
+      {
+        "itemId": "curio-of-potential",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "eclipse-support",
+        "dropRate": 0.02,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "grace-of-the-goddess",
+        "dropRate": 0.14,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "impossible-escape",
+        "dropRate": 0.315,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "invert-the-rules-support",
+        "dropRate": 0.1,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "orb-of-conflict",
+        "dropRate": 0.32,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "progenesis",
+        "dropRate": 0.025,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      },
+      {
+        "itemId": "shiny-reliquary-key",
+        "dropRate": 0.007,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven"
+      }
+    ]
+  },
+  {
+    "id": "shaper",
+    "name": "Shaper",
+    "slug": "shaper",
+    "description": "The Shaper pinnacle encounter.",
+    "entryComponents": [
+      {
+        "itemId": "fragment-phoenix",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-minotaur",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-chimera",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-hydra",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "voidstorm-support",
+        "dropRate": null
+      },
+      {
+        "itemId": "dying-sun",
+        "dropRate": 0.03,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.03,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "shapers-exalted-orb",
+        "dropRate": 0.12,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "shapers-touch",
+        "dropRate": 0.56,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "solstice-vigil",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "voidwalker",
+        "dropRate": 0.26,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "fragment-of-knowledge",
+        "dropRate": 0.5,
+        "dropGroupId": "uber-elder-fragment",
+        "dropGroupType": "one_of",
+        "notes": "Guaranteed one of Fragment of Knowledge or Fragment of Shape; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "fragment-of-shape",
+        "dropRate": 0.5,
+        "dropGroupId": "uber-elder-fragment",
+        "dropGroupType": "one_of",
+        "notes": "Guaranteed one of Fragment of Knowledge or Fragment of Shape; source=data/curated/IMPORTANT.TXT"
+      }
+    ]
+  },
+  {
+    "id": "uber-shaper",
+    "name": "Uber Shaper",
+    "slug": "uber-shaper",
+    "description": "The Uber Shaper encounter.",
+    "entryComponents": [
+      {
+        "itemId": "cosmic-fragment",
+        "quantity": 4
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "voidstorm-support",
+        "dropRate": null
+      },
+      {
+        "itemId": "cosmic-reliquary-key",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+
+      {
+        "itemId": "echoes-of-creation",
+        "dropRate": 0.4,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "entropic-devastation",
+        "dropRate": 0.36,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.03,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "shapers-exalted-orb",
+        "dropRate": 0.12,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "starforge",
+        "dropRate": 0.02,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "sublime-vision",
+        "dropRate": 0.02,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      },
+      {
+        "itemId": "the-tides-of-time",
+        "dropRate": 0.22,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper"
+      }
+    ]
+  },
+  {
+    "id": "sirus",
+    "name": "Sirus",
+    "slug": "sirus",
+    "description": "Sirus, Awakener of Worlds.",
+    "entryComponents": [
+      {
+        "itemId": "veritanias-crest",
+        "quantity": 1
+      },
+      {
+        "itemId": "droxs-crest",
+        "quantity": 1
+      },
+      {
+        "itemId": "barans-crest",
+        "quantity": 1
+      },
+      {
+        "itemId": "al-hezmin-crest",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "a-fate-worse-than-death",
+        "dropRate": 0.04,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "annihilation-support",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "awakeners-orb",
+        "dropRate": 0.2,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "crown-of-the-inward-eye",
+        "dropRate": 0.35,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "hands-of-the-high-templar",
+        "dropRate": 0.4,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+
+      {
+        "itemId": "the-burden-of-truth",
+        "dropRate": 0.2,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "thread-of-hope",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      }
+    ]
+  },
+  {
+    "id": "uber-sirus",
+    "name": "Uber Sirus",
+    "slug": "uber-sirus",
+    "description": "Sirus, Awakener of Worlds.",
+    "entryComponents": [
+      {
+        "itemId": "awakening-fragment",
+        "quantity": 4
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "a-fate-worse-than-death",
+        "dropRate": 0.04,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "annihilation-support",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+
+      {
+        "itemId": "awakeners-orb",
+        "dropRate": 0.2,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "oriaths-end",
+        "dropRate": 0.075,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "oubliette-reliquary-key",
+        "dropRate": 0.015,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "the-saviour",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "the-tempest-rising",
+        "dropRate": 0.37,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      },
+      {
+        "itemId": "thread-of-hope",
+        "dropRate": 0.55,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds"
+      }
+    ]
+  },
+  {
+    "id": "elder",
+    "name": "Elder",
+    "slug": "elder",
+    "description": "The Elder encounter.",
+    "entryComponents": [
+      {
+        "itemId": "fragment-of-purification",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-of-constriction",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-of-enslavement",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-of-eradication",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "elders-exalted-orb",
+        "dropRate": 0.1
+      },
+      {
+        "itemId": "impresence-chaos",
+        "dropRate": 0.02,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "impresence-physical",
+        "dropRate": 0.02,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "impresence-cold",
+        "dropRate": 0.02,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "impresence-lightning",
+        "dropRate": 0.02,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "impresence-fire",
+        "dropRate": 0.02,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "cyclopean-coil",
+        "dropRate": 0.3,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "blasphemers-grasp",
+        "dropRate": 0.3,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "nebuloch",
+        "dropRate": 0.1,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "hopeshredder",
+        "dropRate": 0.1,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "shimmeron",
+        "dropRate": 0.1,
+        "dropGroupId": "elder-guaranteed-unique",
+        "dropGroupType": "one_of",
+        "notes": "Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT"
+      },
+
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.02
+      },
+      {
+        "itemId": "watchers-eye-unidentified-ilvl-85",
+        "dropRate": 0.4
+      },
+      {
+        "itemId": "eldritch-blasphemy-support",
+        "dropRate": null
+      },
+      {
+        "itemId": "void-of-the-elements",
+        "dropRate": null
+      },
+      {
+        "itemId": "fragment-of-terror",
+        "dropRate": 0.5,
+        "dropGroupId": "uber-elder-fragment",
+        "dropGroupType": "one_of",
+        "notes": "Guaranteed one of Fragment of Terror or Fragment of Emptiness; source=data/curated/IMPORTANT.TXT"
+      },
+      {
+        "itemId": "fragment-of-emptiness",
+        "dropRate": 0.5,
+        "dropGroupId": "uber-elder-fragment",
+        "dropGroupType": "one_of",
+        "notes": "Guaranteed one of Fragment of Terror or Fragment of Emptiness; source=data/curated/IMPORTANT.TXT"
+      }
+    ]
+  },
+  {
+    "id": "uber-elder",
+    "name": "Uber Elder",
+    "slug": "uber-elder",
+    "description": "The combined Elder and Shaper encounter.",
+    "entryComponents": [
+      {
+        "itemId": "fragment-of-knowledge",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-of-shape",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-of-terror",
+        "quantity": 1
+      },
+      {
+        "itemId": "fragment-of-emptiness",
+        "quantity": 1
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "void-shockwave-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "cooldown-recovery-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "auspicious-ambitions",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "disintegrator",
+        "dropRate": 0.03,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "elders-exalted-orb",
+        "dropRate": 0.1,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "indigon",
+        "dropRate": 0.12,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "mark-of-the-elder",
+        "dropRate": 0.35,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "mark-of-the-shaper",
+        "dropRate": 0.35,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "shapers-exalted-orb",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "void-of-the-elements",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "voidfletcher",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "watchers-eye-unidentified-ilvl-86-plus",
+        "dropRate": 0.3,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      }
+    ]
+  },
+  {
+    "id": "uber-uber-elder",
+    "name": "Uber Uber Elder",
+    "slug": "uber-uber-elder",
+    "description": "The combined Elder and Shaper encounter (uber).",
+    "entryComponents": [
+      {
+        "itemId": "decaying-fragment",
+        "quantity": 4
+      }
+    ],
+    "drops": [
+      {
+        "itemId": "void-shockwave-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "cooldown-recovery-support",
+        "dropRate": null,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "auspicious-ambitions",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "call-of-the-void",
+        "dropRate": 0.4,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "curio-of-decay",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "decaying-reliquary-key",
+        "dropRate": 0.015,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+
+      {
+        "itemId": "elders-exalted-orb",
+        "dropRate": 0.1,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "impresence-chaos",
+        "dropRate": 0.02,
+        "dropGroupId": "uber-uber-elder-impresence",
+        "dropGroupType": "one_of",
+        "notes": "Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "impresence-physical",
+        "dropRate": 0.02,
+        "dropGroupId": "uber-uber-elder-impresence",
+        "dropGroupType": "one_of",
+        "notes": "Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "impresence-cold",
+        "dropRate": 0.02,
+        "dropGroupId": "uber-uber-elder-impresence",
+        "dropGroupType": "one_of",
+        "notes": "Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "impresence-lightning",
+        "dropRate": 0.02,
+        "dropGroupId": "uber-uber-elder-impresence",
+        "dropGroupType": "one_of",
+        "notes": "Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "impresence-fire",
+        "dropRate": 0.02,
+        "dropGroupId": "uber-uber-elder-impresence",
+        "dropGroupType": "one_of",
+        "notes": "Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "orb-dominance",
+        "dropRate": 0.05,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "shapers-exalted-orb",
+        "dropRate": 0.15,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "soul-ascension",
+        "dropRate": 0.1,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "sublime-vision",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "the-devourer-of-minds",
+        "dropRate": 0.3,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "the-eternity-shroud",
+        "dropRate": 0.06,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "void-of-the-elements",
+        "dropRate": 0.01,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "voidforge",
+        "dropRate": 0.04,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      },
+      {
+        "itemId": "watchers-eye-unidentified-ilvl-86-plus",
+        "dropRate": 0.3,
+        "notes": "Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)"
+      }
+    ]
+  }
+]

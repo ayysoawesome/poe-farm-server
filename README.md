@@ -56,7 +56,18 @@ Set the production cron secret:
 pnpm exec wrangler secret put CRON_SECRET
 ```
 
-`PRICE_SYNC_PROVIDER` is configured as `poe_ninja`. The mock provider remains available for local tests by setting `PRICE_SYNC_PROVIDER=mock`.
+`PRICE_SYNC_PROVIDER` is configured as `poe_ninja`. That syncs regular poe.ninja mappings plus any items marked as manually priced. The mock provider remains available for local tests by setting `PRICE_SYNC_PROVIDER=mock`.
+
+Public stash pricing requires a Path of Exile API token with the `service:psapi` scope and an identifiable API user agent:
+
+```bash
+pnpm exec wrangler secret put POE_API_TOKEN
+pnpm exec wrangler secret put POE_API_USER_AGENT
+```
+
+`POE_PUBLIC_STASH_CHANGE_ID` can seed the public stash cursor and `POE_PUBLIC_STASH_MAX_PAGES` limits how many stream pages a price sync samples per run. This is only needed after switching an item from manual pricing to `poe_public_stash`.
+
+By default, poe.ninja synchronization excludes Hardcore leagues because manual item prices are currently maintained only for trade softcore leagues. Set `POE_NINJA_EXCLUDED_LEAGUE_IDS` to a comma-separated list to override that default.
 
 ## Database
 
@@ -78,7 +89,40 @@ Seed the local database:
 pnpm db:seed:local
 ```
 
-The seed is idempotent and contains one current league, ten requested items, six independent bosses, fixed entry components, fake drop rates, one coherent seed price set, and calculated snapshots.
+The seed is idempotent and contains one manual local fallback league, ten requested items, six independent bosses, fixed entry components, fake drop rates, one coherent seed price set, and calculated snapshots.
+
+Build curated-only SQL from JSON:
+
+```bash
+pnpm curated:build
+```
+
+Import curated data locally:
+
+```bash
+pnpm curated:import:local
+```
+
+Import curated data to production:
+
+```bash
+pnpm curated:import:remote
+```
+
+Curated data lives in split JSON files:
+
+- `data/curated/items.json`
+- `data/curated/bosses.json`
+
+These files include only items, poe.ninja item mappings, bosses, entry components, and drop rates. The importer intentionally does not write leagues, prices, sync runs, or profit snapshots. After production curated import, run `/internal/sync` to fetch poe.ninja leagues/prices and calculate snapshots.
+
+Generate a PoE Wiki drop-rate draft:
+
+```bash
+pnpm curated:scrape:poewiki
+```
+
+The scraper reads `data/curated/poewiki-bosses.json`, fetches the rendered PoE Wiki pages, parses the `Drops` section, and writes `data/curated/drafts/poewiki-drops.json`. This is intentionally draft-only: PoE Wiki rates are community estimates, so review the output and manually merge accepted entries into `data/curated/items.json` and `data/curated/bosses.json`.
 
 Apply migrations to production after inserting the real D1 ID:
 
@@ -142,10 +186,10 @@ Public read-only endpoints:
 
 - `GET /api/health`
 - `GET /api/leagues`
-- `GET /api/bosses?leagueId=current`
-- `GET /api/bosses/:bossId?leagueId=current`
+- `GET /api/bosses?leagueId=standard`
+- `GET /api/bosses/:bossId?leagueId=standard`
 - `GET /api/items/search?q=maven`
-- `GET /api/profit/:bossId?leagueId=current`
+- `GET /api/profit/:bossId?leagueId=standard`
 
 Internal endpoints:
 
@@ -192,13 +236,55 @@ Prices are stored only in Chaos Orb values. Divine Orb is just another currency 
 
 The backend derives Divine values from the snapshot's stored `divineOrbChaosValue`; the frontend does not need to perform currency conversion.
 
-Price synchronization uses poe.ninja item mappings stored in `item_price_mappings`. Each tracked item needs one active mapping with:
+Price synchronization uses item mappings stored in `item_price_mappings`. Most tracked items use poe.ninja:
 
 - `provider = poe_ninja`
 - `external_type` equal to the poe.ninja `type` query value, for example `Currency`, `Fragment`, `SkillGem`, `UniqueFlask`
 - `external_key` equal to the line name returned by poe.ninja
 
-Active leagues also need `external_name`, which is the league name used in poe.ninja URLs.
+Items that need manual prices use:
+
+- `provider = manual`
+- `external_type = Manual`
+- `external_key` equal to the item id
+
+Manual prices live in `manual_item_prices`. A regular price sync copies those current manual values into `item_prices` under the new `sync_run_id`, so profit snapshots still use one coherent price set.
+
+Example manual update:
+
+```sql
+INSERT INTO manual_item_prices (
+  id, item_id, league_id, chaos_value, notes, created_at, updated_at
+) VALUES (
+  'manual-watchers-eye-unidentified-ilvl-85-standard',
+  'watchers-eye-unidentified-ilvl-85',
+  'standard',
+  120,
+  'Unidentified ilvl 85, instant buyout checked manually',
+  unixepoch() * 1000,
+  unixepoch() * 1000
+)
+ON CONFLICT(item_id, league_id) DO UPDATE SET
+  chaos_value = excluded.chaos_value,
+  notes = excluded.notes,
+  updated_at = excluded.updated_at;
+```
+
+The current manual-only items are:
+
+- `watchers-eye-unidentified-ilvl-85`
+- `watchers-eye-unidentified-ilvl-86-plus`
+
+Leagues are synchronized from `https://poe.ninja/poe1/api/data/index-state` using its `economyLeagues` array. The backend stores:
+
+- `id`: normalized API id, for example `standard` or `mercenaries`
+- `name`: display name for API consumers
+- `external_name`: exact poe.ninja league name used in price URLs
+- `source = poe_ninja`
+
+When a poe.ninja league disappears from `economyLeagues`, the next full sync marks that `poe_ninja` league inactive. Manual leagues are left untouched and are not used by price synchronization.
+
+The default league sync also filters out `hardcore` and `hardcore-*` league ids. This keeps profit recalculation from requiring manual Watcher's Eye prices for Hardcore economies while those prices are not maintained.
 
 ## Profit formula
 
@@ -220,4 +306,13 @@ Each full sync creates one `sync_runs` row, writes item prices under that same I
 
 ## Price provider
 
-`src/services/price.service.ts` defines the `PriceProvider` interface, the `PoeNinjaPriceProvider`, and the `MockPriceProvider`. The poe.ninja provider batches requests by external type and stores normalized Chaos values under one `syncRunId`. Route, repository, cron, and profitability code do not need to know which upstream provider is active.
+`src/services/price.service.ts` defines the `PriceProvider` interface, `PoeNinjaPriceProvider`, `ManualPriceProvider`, `PoePublicStashPriceProvider`, and `MockPriceProvider`. A full sync first refreshes poe.ninja economy leagues, then each active provider stores normalized Chaos values under one `syncRunId`. Route, repository, cron, and profitability code do not need to know which upstream provider is active.
+
+`PoePublicStashPriceProvider` is reserved for future automatic pricing of items that poe.ninja cannot split correctly, such as unidentified Watcher's Eye variants. To enable it later:
+
+1. Request a Path of Exile OAuth application from GGG with `client_credentials` grant and `service:psapi` scope.
+2. Set `POE_API_TOKEN` and `POE_API_USER_AGENT`.
+3. Change the item mapping from `manual` to `poe_public_stash` with `external_type = PublicStashSearch` and an `external_key` JSON query.
+4. Run `pnpm curated:build`, import curated data, then run `/internal/sync`.
+
+The public stash provider only accepts exact stash notes like `~price 2 divine` or `~price 450 chaos`; it intentionally ignores `~b/o`.

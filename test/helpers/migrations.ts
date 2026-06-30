@@ -10,13 +10,28 @@ import migration2 from "../../drizzle/migrations/0002_typical_warstar.sql?raw";
 import migration3 from "../../drizzle/migrations/0003_boss_entry_drop_pricing_model.sql?raw";
 // @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
 import migration4 from "../../drizzle/migrations/0004_green_outlaw_kid.sql?raw";
+// @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
+import migration5 from "../../drizzle/migrations/0005_reflective_microbe.sql?raw";
+// @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
+import migration6 from "../../drizzle/migrations/0006_boss_drop_groups.sql?raw";
+// @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
+import migration7 from "../../drizzle/migrations/0007_manual_item_prices.sql?raw";
+// @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
+import migration8 from "../../drizzle/migrations/0008_latest_operational_tables.sql?raw";
+// @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
+import migration9 from "../../drizzle/migrations/0009_item_divination_card_category.sql?raw";
 
 export const migrationSql = [
   migration0,
   migration1,
   migration2,
   migration3,
-  migration4
+  migration4,
+  migration5,
+  migration6,
+  migration7,
+  migration8,
+  migration9
 ];
 
 const splitMigration = (sql: string) =>
@@ -45,7 +60,10 @@ export const query = async <T>(sql: string) => {
 export const resetMigrationDatabase = async () => {
   const tables = [
     "profit_snapshots",
+    "latest_profit_snapshots",
     "item_prices",
+    "latest_item_prices",
+    "manual_item_prices",
     "item_price_mappings",
     "boss_drops",
     "boss_entry_components",
@@ -80,7 +98,7 @@ export const applyLegacyMigrations = async () => {
 };
 
 export const applyAllMigrations = async () => {
-  for (const migration of [0, 1, 2, 3, 4]) {
+  for (const migration of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
     await executeMigration(migration);
   }
 };
