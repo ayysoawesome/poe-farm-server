@@ -159,7 +159,7 @@ CREATE TABLE `__new_items` (
 	`trade_url` text,
 	`created_at` integer NOT NULL,
 	`updated_at` integer NOT NULL,
-	CONSTRAINT "items_category_check" CHECK(`category` in ('currency', 'fragment', 'equipment', 'gem', 'map', 'other'))
+	CONSTRAINT "items_category_check" CHECK(`category` in ('currency', 'fragment', 'divination_card', 'equipment', 'gem', 'map', 'other'))
 );
 --> statement-breakpoint
 INSERT INTO `__new_items` (

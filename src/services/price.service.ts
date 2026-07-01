@@ -6,6 +6,7 @@ import {
 } from "../repositories/league.repository";
 import { listActivePriceMappingsByProvider } from "../repositories/item-price-mapping.repository";
 import {
+  findLatestItemPrice,
   listManualItemPrices,
   upsertLatestItemPrices,
   type NewItemPrice
@@ -18,8 +19,8 @@ const CHAOS_ORB_ITEM_ID = "chaos-orb";
 const DIVINE_ORB_ITEM_ID = "divine-orb";
 const DEFAULT_EXCLUDED_POE_NINJA_LEAGUE_IDS = new Set(["hardcore"]);
 const EXCHANGE_FIRST_TYPES = new Set(["Fragment", "Invitation"]);
+const STASH_CURRENCY_TYPES = new Set(["DivinationCard"]);
 const STASH_ITEM_TYPES = new Set([
-  "DivinationCard",
   "Map",
   "SkillGem",
   "UniqueAccessory",
@@ -303,6 +304,16 @@ export class PoeNinjaPriceProvider implements PriceProvider {
             await this.fetchCurrencyLines(input.leagueExternalName)
           );
         }
+        continue;
+      }
+
+      if (STASH_CURRENCY_TYPES.has(externalType)) {
+        const stashCurrencyPrices = await this.fetchStashCurrencyPrices(
+          input.leagueExternalName,
+          externalType,
+          mappings
+        );
+        for (const [itemId, price] of stashCurrencyPrices) prices.set(itemId, price);
         continue;
       }
 
@@ -900,6 +911,27 @@ const mappingProvidersFor = (
 
 export class PriceService {
   constructor(private readonly env: Env) {}
+
+  async getDivineChaosRate(leagueId: string) {
+    const price = await findLatestItemPrice(
+      createDb(this.env.DB),
+      DIVINE_ORB_ITEM_ID,
+      leagueId
+    );
+    if (price === null) {
+      throw new AppError(
+        404,
+        "DIVINE_CHAOS_RATE_NOT_FOUND",
+        `No Divine Orb price exists for league '${leagueId}'`
+      );
+    }
+    return {
+      leagueId,
+      chaosValue: price.chaosValue,
+      capturedAt: price.capturedAt,
+      syncRunId: price.syncRunId
+    };
+  }
 
   async syncLeagues(): Promise<number> {
     const provider = getProvider(

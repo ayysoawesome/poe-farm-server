@@ -354,7 +354,7 @@ describe("PoeNinjaPriceProvider", () => {
     ]);
   });
 
-  it("prices divination cards and maps from stash item overview", async () => {
+  it("prices divination cards from stash currency overview and maps from item overview", async () => {
     const requests: string[] = [];
     const provider = new PoeNinjaPriceProvider(async (url) => {
       requests.push(url);
@@ -391,7 +391,7 @@ describe("PoeNinjaPriceProvider", () => {
     expect(prices.get("a-fate-worse-than-death")).toBe(12);
     expect(prices.get("the-shapers-realm")).toBe(40);
     expect(requests).toEqual([
-      "https://poe.ninja/poe1/api/economy/stash/current/item/overview?league=Mirage&type=DivinationCard",
+      "https://poe.ninja/poe1/api/economy/stash/current/currency/overview?league=Mirage&type=DivinationCard",
       "https://poe.ninja/poe1/api/economy/stash/current/item/overview?league=Mirage&type=Map"
     ]);
   });

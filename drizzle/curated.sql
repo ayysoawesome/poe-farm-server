@@ -7,8 +7,8 @@ INSERT INTO items (
         'divination_card',
         'https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -25,8 +25,8 @@ INSERT INTO item_price_mappings (
         'DivinationCard',
         'A Fate Worse Than Death',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -41,8 +41,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L09ibGl0ZXJhdGlvblN1cHBvcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZ2UiOnRydWV9XQ/b8374aaed8/ObliterationSupport.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -59,8 +59,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Annihilation Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -75,8 +75,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VYmVyU2VhcmluZ0V4YXJjaEJvb3QiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/705e9f657f/UberSearingExarchBoot.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -93,8 +93,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Annihilation''s Approach',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -109,8 +109,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TZWFyaW5nRXhhcmNoRm9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/bb895c1f5d/SearingExarchFoil.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -127,8 +127,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Archive Reliquary Key',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -143,8 +143,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlU3RyIiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/c07eed602e/AltChargeStr.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -161,8 +161,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Arn''s Anguish',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -177,8 +177,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9NYXN0ZXJPZkdlbXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/f6497cbdfe/MasterOfGems.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -195,8 +195,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Ashes of the Stars',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -211,8 +211,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNlYXJpbmdFeGFyY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a005e1a684/UberBossKeySearingExarch.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -229,8 +229,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Blazing Fragment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -245,8 +245,8 @@ INSERT INTO items (
         'divination_card',
         'https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -263,8 +263,8 @@ INSERT INTO item_price_mappings (
         'DivinationCard',
         'Auspicious Ambitions',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -279,8 +279,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL2VuaGFuY2VwbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d3de7b3bd1/enhanceplus.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -297,8 +297,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Awakened Enhance Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -313,8 +313,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VubGlnaHRlbnBsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7ec7d0544d/Enlightenplus.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -331,8 +331,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Awakened Enlighten Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -347,8 +347,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL011bHRpcGxlQXR0YWNrc1BsdXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c32ddc2121/MultipleAttacksPlus.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -365,8 +365,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Awakened Multistrike Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -381,8 +381,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVHJhbnNmZXJPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6db384ea6e/TransferOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -399,8 +399,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Awakener''s Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -415,8 +415,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRnJvc3RHbGF6ZWRFeWVSaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e10b85c4f1/FrostGlazedEyeRing.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -433,8 +433,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Call of the Void',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -449,8 +449,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lSZXJvbGxSYXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d119a0d734/CurrencyRerollRare.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -467,8 +467,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Chaos Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -483,8 +483,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaGFwZXJGb2lsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/71325272ad/ShaperFoil.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -501,8 +501,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Cosmic Reliquary Key',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -517,8 +517,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0Nyb3duT2ZUaGVJbndhcmRFeWUiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/fdb20856e4/CrownOfTheInwardEye.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -535,8 +535,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Crown of the Inward Eye',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -551,8 +551,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9Bc2NlbmRhbmNlQW11bGV0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/60368620d5/AscendanceAmulet.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -569,8 +569,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Crystallised Omniscience',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -585,8 +585,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RXhhcmNoIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0da90fe2d1/PinnacleFragmentExarch.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -603,8 +603,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Curio of Absorption',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -619,8 +619,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RWF0ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/a386f18599/PinnacleFragmentEater.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -637,8 +637,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Curio of Consumption',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -653,8 +653,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50RWxkZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/40544dbcfb/PinnacleFragmentElder.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -671,8 +671,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Curio of Decay',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -687,8 +687,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9QaW5uYWNsZUZyYWdtZW50TWF2ZW4iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/53c751ef5d/PinnacleFragmentMaven.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -705,8 +705,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Curio of Potential',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -721,8 +721,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9TaGllbGRzL1N1cGVyaGVhdGVkU2hpZWxkIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/59e3552a9b/SuperheatedShield.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -739,8 +739,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Dawnbreaker',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -755,8 +755,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9JbmZlY3Rpb3VzQ29uc3RydWN0IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/bf1cb0a5b4/InfectiousConstruct.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -773,8 +773,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Dawnstrider',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -789,8 +789,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9FbGRlckZvaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2c6d5b7eb2/ElderFoil.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -807,8 +807,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Decaying Reliquary Key',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -823,8 +823,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVhdGVyT2ZXb3JsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/935c580d4c/UberBossKeyEaterOfWorlds.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -841,8 +841,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Devouring Fragment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -857,8 +857,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvRWxkZXJTdGFmZiIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/4d2bfda95c/ElderStaff.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -875,8 +875,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Disintegrator',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -891,8 +891,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1Jlc2VydmVkQmxvb2RKZXdlbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/1a4688f335/ReservedBloodJewel.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -909,8 +909,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Dissolution of the Flesh',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -925,8 +925,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -943,8 +943,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Divine Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -959,8 +959,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9Db2xsZWN0b3JzR2FyYkRpZmYiLCJ3IjoyLCJoIjozLCJzY2FsZSI6MX1d/eb8a6d36ef/CollectorsGarbDiff.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -977,8 +977,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'DoppelgГ¤nger Guise',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -993,8 +993,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvU2hhcGVyc0ZsYXNrIiwidyI6MSwiaCI6Miwic2NhbGUiOjEsImxldmVsIjoxfV0/c6e2f8118d/ShapersFlask.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1011,8 +1011,8 @@ INSERT INTO item_price_mappings (
         'UniqueFlask',
         'Dying Sun',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1027,8 +1027,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1RoZVR3aXN0aW5nU2NyZWFtIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/4815fa0fc8/TheTwistingScream.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1045,8 +1045,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Echoes of Creation',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1061,8 +1061,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL0Nvc21pY0ZvcmdlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/df82c06267/CosmicForge.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1079,8 +1079,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Echoforge',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1095,8 +1095,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0VjbGlwc2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZ2UiOnRydWV9XQ/01d4f8b241/Eclipse.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1113,8 +1113,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Eclipse Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1129,8 +1129,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvRWxkZXJFeGFsdGVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/233ff3fef0/ElderExaltedOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1147,8 +1147,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Elder''s Exalted Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1163,8 +1163,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hDaGFvc09yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/afdc1d40be/EldritchChaosOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1181,8 +1181,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Eldritch Chaos Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1197,8 +1197,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hFeGFsdGVkT3JiIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/56026bffa3/EldritchExaltedOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1215,8 +1215,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Eldritch Exalted Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1231,8 +1231,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRWxkcml0Y2hBbm51bG1lbnRPcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/cd03411d81/EldritchAnnulmentOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1249,8 +1249,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Eldritch Orb of Annulment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1265,8 +1265,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVWJlclNoYXBlckdsb3ZlcyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/50bd7171bf/UberShaperGloves.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1283,8 +1283,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Entropic Devastation',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1299,8 +1299,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2xlYW5zaW5nRmlyZU9yYlJhbms0IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/920113641f/CleansingFireOrbRank4.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1317,8 +1317,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Exceptional Eldritch Ember',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1333,8 +1333,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFuZ2xlT3JiUmFuazQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/c1205e2c0a/TangleOrbRank4.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1351,8 +1351,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Exceptional Eldritch Ichor',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1367,8 +1367,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1B1enpsZVBpZWNlSmV3ZWxfQ2xlYW5zaW5nRmlyZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ddfe57ac90/PuzzlePieceJewel_CleansingFire.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1385,8 +1385,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Forbidden Flame',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1401,8 +1401,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1B1enpsZVBpZWNlSmV3ZWxfR3JlYXRUYW5nbGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/9035b9ffd4/PuzzlePieceJewel_GreatTangle.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1419,8 +1419,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Forbidden Flesh',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1435,8 +1435,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRDaGltZXJhIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/df51d0bd7a/FragmentChimera.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1453,8 +1453,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of the Chimera',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1469,8 +1469,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRIeWRyYSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/16cec8bced/FragmentHydra.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1487,8 +1487,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of the Hydra',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1503,8 +1503,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRNaW5vdGF1ciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/a6307f6cc9/FragmentMinotaur.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1521,8 +1521,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of the Minotaur',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1537,8 +1537,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcHMvRnJhZ21lbnRQaG9lbml4IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/bf64bb03f8/FragmentPhoenix.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1555,8 +1555,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of the Phoenix',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1571,8 +1571,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9VYmVyTWF2ZW5XYW5kIiwidyI6MSwiaCI6Mywic2NhbGUiOjF9XQ/1e06b23a5b/UberMavenWand.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1589,8 +1589,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Grace of the Goddess',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1605,8 +1605,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0dsdXR0b255U3VwcG9ydCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/50841b2e02/GluttonySupport.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1623,8 +1623,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Gluttony Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1639,8 +1639,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlSW50IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/1300aed2ac/AltChargeInt.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1657,8 +1657,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Graven''s Secret',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1673,8 +1673,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvSGFuZHNPZlRoZUhpZ2hUZW1wbGFyIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/239b2df5cf/HandsOfTheHighTemplar.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1691,8 +1691,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Hands of the High Templar',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1707,8 +1707,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL01pbmRib3JlUGVhcmwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/367683a1bb/MindborePearl.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1725,8 +1725,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Impossible Escape',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1741,8 +1741,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9DbGVhbnNpbmdGaXJlT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e6f9234053/CleansingFireOrbQuest5.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1759,8 +1759,8 @@ INSERT INTO item_price_mappings (
         'Invitation',
         'Incandescent Invitation',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1775,8 +1775,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckNoYW9zIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/fae9c0f072/ElderChaos.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1793,8 +1793,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'impresence-chaos-onyx-amulet',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1809,8 +1809,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlclBoeXNpY2FsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/b41e1bdcc9/ElderPhysical.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1827,8 +1827,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'impresence-physical-onyx-amulet',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1843,8 +1843,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckNvbGQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/157b678ffb/ElderCold.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1861,8 +1861,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'impresence-cold-onyx-amulet',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1877,8 +1877,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckxpZ2h0bmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/371ac0eb40/ElderLightning.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1895,8 +1895,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'impresence-lightning-onyx-amulet',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1911,8 +1911,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9FbGRlckZpcmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/b863d024fe/ElderFire.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1929,8 +1929,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'impresence-fire-onyx-amulet',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1945,8 +1945,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ViZXJFbGRlckhlbG1ldCIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/005bcc2179/UberElderHelmet.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1963,8 +1963,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Indigon',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -1979,8 +1979,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9WaW5lZ3Jhc3BCb290c1VuaXF1ZSIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/4f56e4bdb0/VinegraspBootsUnique.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -1997,8 +1997,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Inextricable Fate',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2013,8 +2013,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0ludmVydHRoZVJ1bGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsImdlIjp0cnVlfV0/0f08d4a859/InverttheRules.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2031,8 +2031,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Invert the Rules Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2047,8 +2047,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9TY29yY2hlZEVhcnRoIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/fda63f7588/ScorchedEarth.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2065,8 +2065,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Legacy of Fury',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2081,8 +2081,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckVsZGVyUmluZyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d211f75615/UberElderRing.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2099,8 +2099,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Mark of the Elder',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2115,8 +2115,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlclNoYXBlclJpbmciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/302889cfca/UberShaperRing.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2133,8 +2133,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Mark of the Shaper',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2149,8 +2149,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXRsYXMvTWF2ZW5LZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ad4c12144c/MavenKey.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2167,8 +2167,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Maven''s Writ',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2183,8 +2183,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0VudGFuZ2xlZEVsZW1lbnRzSmV3ZWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/781ab651c4/EntangledElementsJewel.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2201,8 +2201,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Melding of the Flesh',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2217,8 +2217,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvVWJlckVhdGVyb2ZXb3JsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/6dbfb1baea/UberEaterofWorlds.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2235,8 +2235,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Nimis',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2251,8 +2251,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvQWx0Q2hhcmdlRGV4IiwidyI6MiwiaCI6MSwic2NhbGUiOjEsInJlbGljIjowfV0/5f83eaba26/AltChargeDex.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2269,8 +2269,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Olesya''s Delight',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2285,8 +2285,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L092ZXJoZWF0U3VwcG9ydCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/b74bfe9994/OverheatSupport.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2303,8 +2303,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Overheat Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2319,8 +2319,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvTWF2ZW5PcmIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/8396ed7d8d/MavenOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2337,8 +2337,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Orb of Dominance',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2353,8 +2353,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ29uZmxpY3RPcmJSYW5rMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/e1919976c3/ConflictOrbRank1.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2371,8 +2371,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Orb of Conflict',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2387,8 +2387,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVWJlclNpcnVzRmxhc2siLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjF9XQ/8758d70627/UberSirusFlask.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2405,8 +2405,8 @@ INSERT INTO item_price_mappings (
         'UniqueFlask',
         'Oriath''s End',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2421,8 +2421,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaXJ1c0ZvaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7e611a9eb0/SirusFoil.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2439,8 +2439,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Oubliette Reliquary Key',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2455,8 +2455,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzksMTQseyJmIjoiMkRJdGVtcy9GbGFza3MvVWJlck1hdmVuRmxhc2siLCJ3IjoxLCJoIjoyLCJzY2FsZSI6MSwibGV2ZWwiOjEsImZpIjp0cnVlfV0/1883213ee8/UberMavenFlask.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2473,8 +2473,8 @@ INSERT INTO item_price_mappings (
         'UniqueFlask',
         'Progenesis',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2489,8 +2489,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ViZXJFYXRlcm9mV29ybGRzSGVsbWV0IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/2215119a51/UberEaterofWorldsHelmet.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2507,8 +2507,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Ravenous Passion',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2523,8 +2523,8 @@ INSERT INTO items (
         'currency',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VjcmV0c29mdGhlQXRsYXMvU2hhcGVyRXhhbHRlZE9yYiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ca4ad1f9eb/ShaperExaltedOrb.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2541,8 +2541,8 @@ INSERT INTO item_price_mappings (
         'Currency',
         'Shaper''s Exalted Orb',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2557,8 +2557,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvU2hhcGVyc0dsb3ZlcyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/633aead741/ShapersGloves.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2575,8 +2575,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Shaper''s Touch',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2591,8 +2591,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9UYW5nbGVkT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/75de691c2b/TangledOrbQuest5.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2609,8 +2609,8 @@ INSERT INTO item_price_mappings (
         'Invitation',
         'Screaming Invitation',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2625,8 +2625,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9NYXZlbkZvaWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/114c341a3c/MavenFoil.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2643,8 +2643,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Shiny Reliquary Key',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2659,8 +2659,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQW11bGV0cy9TaGFwZXJzUHJlc2VuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/57d45e4009/ShapersPresence.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2677,8 +2677,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Solstice Vigil',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2693,8 +2693,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvU291bEFzY2Vuc2lvbiIsInciOjIsImgiOjIsInNjYWxlIjoxLCJyZWxpYyI6MH1d/1a968d4cec/SoulAscension.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2711,8 +2711,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Soul Ascension',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2727,8 +2727,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1N0YXJmb3JnZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/86b81685e1/Starforge.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2745,8 +2745,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Starforge',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2761,8 +2761,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL1N1YmxpbWVWaXNpb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/ecd19a7f80/SublimeVision.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2779,8 +2779,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Sublime Vision',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2795,8 +2795,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvSW50cmVwaWR1c0RvbG9yZW0iLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVsaWMiOjV9XQ/2d2a309c80/IntrepidusDolorem.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2813,8 +2813,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'The Annihilating Light',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2829,8 +2829,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvU2lydXNCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/757f213691/SirusBelt.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2847,8 +2847,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'The Burden of Truth',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2863,8 +2863,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvVWJlclNlYXJpbmdFeGFyY2hHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/47d365fea7/UberSearingExarchGloves.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2881,8 +2881,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'The Celestial Brace',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2897,8 +2897,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ViZXJFbGRlckhlbG0iLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/1b4e79354b/UberElderHelm.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2915,8 +2915,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'The Devourer of Minds',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2931,8 +2931,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9NYW50bGVPZkRpc21hbnRsaW5nIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/166d15bbe2/MantleOfDismantling.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2949,8 +2949,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'The Eternity Shroud',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2965,8 +2965,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0ZyZW56aWVkVGVudGFjbGVzIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/6dc3218af0/FrenziedTentacles.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -2983,8 +2983,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'The Gluttonous Tide',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -2999,8 +2999,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL01pcmFnZUJsYWRlIiwidyI6MiwiaCI6Mywic2NhbGUiOjEsInJlbGljIjo3fV0/cddb35c052/MirageBlade.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3017,8 +3017,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'The Saviour',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3033,8 +3033,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9VYmVyU2lydXNCb290cyIsInciOjIsImgiOjIsInNjYWxlIjoxfV0/587f0ef638/UberSirusBoots.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3051,8 +3051,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'The Tempest Rising',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3067,8 +3067,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvVWJlclNoYXBlckJlbHQiLCJ3IjoyLCJoIjoxLCJzY2FsZSI6MX1d/7a326845e7/UberShaperBelt.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3085,8 +3085,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'The Tides of Time',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3101,8 +3101,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0Nvbm5lY3RlZEpld2VsIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1d2c1f698a/ConnectedJewel.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3119,8 +3119,8 @@ INSERT INTO item_price_mappings (
         'UniqueJewel',
         'Thread of Hope',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3135,8 +3135,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0NvbnN0cmljdGluZ0Nyb3duIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/04ee655ca5/ConstrictingCrown.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3153,8 +3153,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Viridi''s Veil',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3169,8 +3169,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9FYXRlck9mV29ybGRzRm9pbCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/b57140936b/EaterOfWorldsFoil.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3187,8 +3187,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Visceral Reliquary Key',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3203,8 +3203,8 @@ INSERT INTO items (
         'divination_card',
         'https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3221,8 +3221,8 @@ INSERT INTO item_price_mappings (
         'DivinationCard',
         'Void of the Elements',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3237,8 +3237,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVpdmVycy9FbGRhclF1aXZlciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/5b04f2a291/EldarQuiver.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3255,8 +3255,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Voidfletcher',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3271,8 +3271,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kU3dvcmRzL1N0YXJmb3JnZSIsInciOjIsImgiOjQsInNjYWxlIjoxfV0/86b81685e1/Starforge.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3289,8 +3289,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Voidforge',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3305,8 +3305,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9Dcm9zc2luZ1RoZVZvaWQiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/f3747eb0f4/CrossingTheVoid.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3323,8 +3323,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Voidwalker',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3339,8 +3339,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9IdW50ZXJGcmFnbWVudCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4a1c79a0f7/HunterFragment.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3357,8 +3357,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Al-Hezmin''s Crest',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3373,8 +3373,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNpcnVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/2d2c405857/UberBossKeySirus.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3391,8 +3391,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Awakening Fragment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3407,8 +3407,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1N1cHBvcnRQbHVzL0VtcG93ZXJQbHVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/eb0e6f91ed/EmpowerPlus.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3425,8 +3425,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Awakened Empower Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3441,8 +3441,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9DcnVzYWRlckZyYWdtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/83e0f167f2/CrusaderFragment.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3459,8 +3459,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Baran''s Crest',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3475,8 +3475,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvRWxkZXJHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/dda114f6f9/ElderGloves.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3493,8 +3493,8 @@ INSERT INTO item_price_mappings (
         'UniqueArmour',
         'Blasphemer''s Grasp',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3509,8 +3509,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0Nvb2xkb3duUmVjb3ZlcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwiZ2UiOnRydWV9XQ/21c017b506/CooldownRecovery.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3527,8 +3527,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Cooldown Recovery Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3543,8 +3543,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNoYXBlciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d5ef574938/UberBossKeyShaper.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3561,8 +3561,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Cosmic Fragment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3577,8 +3577,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvRWxkZXJCZWx0IiwidyI6MiwiaCI6MSwic2NhbGUiOjF9XQ/f565e25e57/ElderBelt.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3595,8 +3595,8 @@ INSERT INTO item_price_mappings (
         'UniqueAccessory',
         'Cyclopean Coil',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3611,8 +3611,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVsZGVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/dffa4053b9/UberBossKeyElder.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3629,8 +3629,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Decaying Fragment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3645,8 +3645,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9XYXJsb3JkRnJhZ21lbnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/863882aba2/WarlordFragment.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3663,8 +3663,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Drox''s Crest',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3679,8 +3679,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L0F1cmlmeSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/35e0f624bb/Aurify.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3697,8 +3697,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Eldritch Blasphemy Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3713,8 +3713,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuSG9seSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ade615a113/AtlasMapGuardianHoly.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3731,8 +3731,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Constriction',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3747,8 +3747,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwMiIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/ced2590995/UberElder02.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3765,8 +3765,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Emptiness',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3781,8 +3781,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuRmlyZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/6327dee00e/AtlasMapGuardianFire.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3799,8 +3799,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Enslavement',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3815,8 +3815,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuTGlnaHRuaW5nIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/22a9d1257c/AtlasMapGuardianLightning.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3833,8 +3833,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Eradication',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3849,8 +3849,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwNCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4a2bab8955/UberElder04.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3867,8 +3867,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Knowledge',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3883,8 +3883,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhc01hcEd1YXJkaWFuQ2hhb3MiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/767832e457/AtlasMapGuardianChaos.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3901,8 +3901,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Purification',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3917,8 +3917,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwMyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/dd71531c9f/UberElder03.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3935,8 +3935,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Shape',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3951,8 +3951,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyRWxkZXIwMSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/061cd63c5e/UberElder01.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -3969,8 +3969,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Fragment of Terror',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -3985,8 +3985,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0VsZGVyQm93IiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/537ee088f0/ElderBow.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4003,8 +4003,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Hopeshredder',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4019,8 +4019,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kTWFjZXMvRWxkZXJNYWNlIiwidyI6MiwiaCI6Mywic2NhbGUiOjF9XQ/f381b102f8/ElderMace.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4037,8 +4037,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Nebuloch',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4053,8 +4053,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleU1hdmVuIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/1876f58c4b/UberBossKeyMaven.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4071,8 +4071,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Reality Fragment',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4087,8 +4087,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9FbGRlcldhbmQiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/f941d5c543/ElderWand.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4105,8 +4105,8 @@ INSERT INTO item_price_mappings (
         'UniqueWeapon',
         'Shimmeron',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4121,8 +4121,8 @@ INSERT INTO items (
         'fragment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9SZWRlZW1lckZyYWdtZW50IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/5416c38a70/RedeemerFragment.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4139,8 +4139,8 @@ INSERT INTO item_price_mappings (
         'Fragment',
         'Veritania''s Crest',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4155,8 +4155,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1Nob2Nrd2F2ZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/d342aa7321/Shockwave.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4173,8 +4173,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Void Shockwave Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4189,8 +4189,8 @@ INSERT INTO items (
         'gem',
         'https://web.poecdn.com/gen/image/WzMwLDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9TdXBwb3J0L1ZvaWRzdG9ybSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJnZSI6dHJ1ZX1d/81b02defec/Voidstorm.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4207,8 +4207,8 @@ INSERT INTO item_price_mappings (
         'SkillGem',
         'Voidstorm Support',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4223,8 +4223,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0VsZGVySmV3ZWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/278c673716/ElderJewel.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4241,8 +4241,8 @@ INSERT INTO item_price_mappings (
         'Manual',
         'watchers-eye-unidentified-ilvl-85',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4257,8 +4257,8 @@ INSERT INTO items (
         'equipment',
         'https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvSmV3ZWxzL0VsZGVySmV3ZWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/278c673716/ElderJewel.png',
         NULL,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4275,8 +4275,8 @@ INSERT INTO item_price_mappings (
         'Manual',
         'watchers-eye-unidentified-ilvl-86-plus',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(item_id, provider) DO UPDATE SET
         external_type = excluded.external_type,
@@ -4291,8 +4291,8 @@ INSERT INTO bosses (
         'eater-of-worlds',
         'The Eater of Worlds pinnacle encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4309,8 +4309,8 @@ INSERT INTO boss_entry_components (
           'eater-of-worlds',
           'screaming-invitation',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4322,8 +4322,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4335,8 +4335,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4348,8 +4348,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4361,8 +4361,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4374,8 +4374,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4387,8 +4387,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4400,8 +4400,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4413,8 +4413,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -4424,8 +4424,8 @@ INSERT INTO bosses (
         'uber-eater-of-worlds',
         'The Uber Eater of Worlds pinnacle encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4442,8 +4442,8 @@ INSERT INTO boss_entry_components (
           'uber-eater-of-worlds',
           'devouring-fragment',
           4,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4455,8 +4455,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4468,8 +4468,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4481,8 +4481,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4494,8 +4494,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4507,8 +4507,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4520,8 +4520,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4533,8 +4533,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4546,8 +4546,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4559,8 +4559,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4572,8 +4572,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4585,8 +4585,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -4596,8 +4596,8 @@ INSERT INTO bosses (
         'exarch',
         'The Searing Exarch pinnacle encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4614,8 +4614,8 @@ INSERT INTO boss_entry_components (
           'exarch',
           'incandescent-invitation',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4627,8 +4627,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4640,8 +4640,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4653,8 +4653,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4666,8 +4666,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4679,8 +4679,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4692,8 +4692,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4705,8 +4705,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4718,8 +4718,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4731,8 +4731,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4744,8 +4744,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4757,8 +4757,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4770,8 +4770,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -4781,8 +4781,8 @@ INSERT INTO bosses (
         'uber-exarch',
         'The Uber Searing Exarch pinnacle encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4799,8 +4799,8 @@ INSERT INTO boss_entry_components (
           'uber-exarch',
           'blazing-fragment',
           4,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4812,8 +4812,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Eater_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4825,8 +4825,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4838,8 +4838,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4851,8 +4851,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4864,8 +4864,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4877,8 +4877,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4890,8 +4890,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4903,8 +4903,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4916,8 +4916,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4929,8 +4929,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4942,8 +4942,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4955,8 +4955,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -4968,8 +4968,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Searing_Exarch',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -4979,8 +4979,8 @@ INSERT INTO bosses (
         'maven',
         'The Maven pinnacle encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -4997,8 +4997,8 @@ INSERT INTO boss_entry_components (
           'maven',
           'mavens-writ',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5010,8 +5010,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5023,8 +5023,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5036,8 +5036,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5049,8 +5049,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5062,8 +5062,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5075,8 +5075,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5088,8 +5088,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5101,8 +5101,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5114,8 +5114,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -5125,8 +5125,8 @@ INSERT INTO bosses (
         'uber-maven',
         'The Uber Maven encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -5143,8 +5143,8 @@ INSERT INTO boss_entry_components (
           'uber-maven',
           'reality-fragment',
           4,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5156,8 +5156,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5169,8 +5169,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5182,8 +5182,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5195,8 +5195,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Mock MVP rate',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5208,8 +5208,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5221,8 +5221,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5234,8 +5234,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5247,8 +5247,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5260,8 +5260,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5273,8 +5273,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5286,8 +5286,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5299,8 +5299,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Maven',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -5310,8 +5310,8 @@ INSERT INTO bosses (
         'shaper',
         'The Shaper pinnacle encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -5328,8 +5328,8 @@ INSERT INTO boss_entry_components (
           'shaper',
           'fragment-phoenix',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5338,8 +5338,8 @@ INSERT INTO boss_entry_components (
           'shaper',
           'fragment-minotaur',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5348,8 +5348,8 @@ INSERT INTO boss_entry_components (
           'shaper',
           'fragment-chimera',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5358,8 +5358,8 @@ INSERT INTO boss_entry_components (
           'shaper',
           'fragment-hydra',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5371,8 +5371,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5384,8 +5384,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5397,8 +5397,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5410,8 +5410,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5423,8 +5423,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5436,8 +5436,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5449,8 +5449,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5462,8 +5462,8 @@ INSERT INTO boss_drops (
           'uber-elder-fragment',
           'one_of',
           'Guaranteed one of Fragment of Knowledge or Fragment of Shape; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5475,8 +5475,8 @@ INSERT INTO boss_drops (
           'uber-elder-fragment',
           'one_of',
           'Guaranteed one of Fragment of Knowledge or Fragment of Shape; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -5486,8 +5486,8 @@ INSERT INTO bosses (
         'uber-shaper',
         'The Uber Shaper encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -5504,8 +5504,8 @@ INSERT INTO boss_entry_components (
           'uber-shaper',
           'cosmic-fragment',
           4,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5517,8 +5517,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5530,8 +5530,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5543,8 +5543,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5556,8 +5556,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5569,8 +5569,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5582,8 +5582,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5595,8 +5595,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5608,8 +5608,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5621,8 +5621,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Shaper',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -5632,8 +5632,8 @@ INSERT INTO bosses (
         'sirus',
         'Sirus, Awakener of Worlds.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -5650,8 +5650,8 @@ INSERT INTO boss_entry_components (
           'sirus',
           'veritanias-crest',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5660,8 +5660,8 @@ INSERT INTO boss_entry_components (
           'sirus',
           'droxs-crest',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5670,8 +5670,8 @@ INSERT INTO boss_entry_components (
           'sirus',
           'barans-crest',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5680,8 +5680,8 @@ INSERT INTO boss_entry_components (
           'sirus',
           'al-hezmin-crest',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5693,8 +5693,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5706,8 +5706,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5719,8 +5719,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5732,8 +5732,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5745,8 +5745,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5758,8 +5758,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5771,8 +5771,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5784,8 +5784,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -5795,8 +5795,8 @@ INSERT INTO bosses (
         'uber-sirus',
         'Sirus, Awakener of Worlds.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -5813,8 +5813,8 @@ INSERT INTO boss_entry_components (
           'uber-sirus',
           'awakening-fragment',
           4,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5826,8 +5826,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5839,8 +5839,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5852,8 +5852,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5865,8 +5865,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5878,8 +5878,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5891,8 +5891,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5904,8 +5904,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5917,8 +5917,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -5930,8 +5930,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/Sirus,_Awakener_of_Worlds',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -5941,8 +5941,8 @@ INSERT INTO bosses (
         'elder',
         'The Elder encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -5959,8 +5959,8 @@ INSERT INTO boss_entry_components (
           'elder',
           'fragment-of-purification',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5969,8 +5969,8 @@ INSERT INTO boss_entry_components (
           'elder',
           'fragment-of-constriction',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5979,8 +5979,8 @@ INSERT INTO boss_entry_components (
           'elder',
           'fragment-of-enslavement',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -5989,8 +5989,8 @@ INSERT INTO boss_entry_components (
           'elder',
           'fragment-of-eradication',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6002,8 +6002,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6015,8 +6015,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6028,8 +6028,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6041,8 +6041,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6054,8 +6054,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6067,8 +6067,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6080,8 +6080,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6093,8 +6093,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6106,8 +6106,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6119,8 +6119,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6132,8 +6132,8 @@ INSERT INTO boss_drops (
           'elder-guaranteed-unique',
           'one_of',
           'Part of guaranteed Elder unique pool; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6145,8 +6145,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6158,8 +6158,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6171,8 +6171,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6184,8 +6184,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           NULL,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6197,8 +6197,8 @@ INSERT INTO boss_drops (
           'uber-elder-fragment',
           'one_of',
           'Guaranteed one of Fragment of Terror or Fragment of Emptiness; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6210,8 +6210,8 @@ INSERT INTO boss_drops (
           'uber-elder-fragment',
           'one_of',
           'Guaranteed one of Fragment of Terror or Fragment of Emptiness; source=data/curated/IMPORTANT.TXT',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -6221,8 +6221,8 @@ INSERT INTO bosses (
         'uber-elder',
         'The combined Elder and Shaper encounter.',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -6239,8 +6239,8 @@ INSERT INTO boss_entry_components (
           'uber-elder',
           'fragment-of-knowledge',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -6249,8 +6249,8 @@ INSERT INTO boss_entry_components (
           'uber-elder',
           'fragment-of-shape',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -6259,8 +6259,8 @@ INSERT INTO boss_entry_components (
           'uber-elder',
           'fragment-of-terror',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_entry_components (
           id, boss_id, item_id, quantity, created_at, updated_at
@@ -6269,8 +6269,8 @@ INSERT INTO boss_entry_components (
           'uber-elder',
           'fragment-of-emptiness',
           1,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6282,8 +6282,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6295,8 +6295,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6308,8 +6308,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6321,8 +6321,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6334,8 +6334,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6347,8 +6347,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6360,8 +6360,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6373,8 +6373,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6386,8 +6386,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6399,8 +6399,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6412,8 +6412,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6425,8 +6425,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6438,8 +6438,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO bosses (
         id, name, slug, description, is_active, created_at, updated_at
@@ -6449,8 +6449,8 @@ INSERT INTO bosses (
         'uber-uber-elder',
         'The combined Elder and Shaper encounter (uber).',
         1,
-        1782857871479,
-        1782857871479
+        1782858888876,
+        1782858888876
       )
       ON CONFLICT(id) DO UPDATE SET
         name = excluded.name,
@@ -6467,8 +6467,8 @@ INSERT INTO boss_entry_components (
           'uber-uber-elder',
           'decaying-fragment',
           4,
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6480,8 +6480,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6493,8 +6493,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6506,8 +6506,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6519,8 +6519,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6532,8 +6532,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6545,8 +6545,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6558,8 +6558,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6571,8 +6571,8 @@ INSERT INTO boss_drops (
           'uber-uber-elder-impresence',
           'one_of',
           'Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6584,8 +6584,8 @@ INSERT INTO boss_drops (
           'uber-uber-elder-impresence',
           'one_of',
           'Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6597,8 +6597,8 @@ INSERT INTO boss_drops (
           'uber-uber-elder-impresence',
           'one_of',
           'Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6610,8 +6610,8 @@ INSERT INTO boss_drops (
           'uber-uber-elder-impresence',
           'one_of',
           'Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6623,8 +6623,8 @@ INSERT INTO boss_drops (
           'uber-uber-elder-impresence',
           'one_of',
           'Split Impresence variants from estimated total 10% drop rate; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6636,8 +6636,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6649,8 +6649,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6662,8 +6662,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6675,8 +6675,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6688,8 +6688,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6701,8 +6701,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6714,8 +6714,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6727,8 +6727,8 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );
 INSERT INTO boss_drops (
           id, boss_id, item_id, drop_rate, drop_group_id, drop_group_type, notes, created_at, updated_at
@@ -6740,6 +6740,6 @@ INSERT INTO boss_drops (
           NULL,
           NULL,
           'Estimated drop rate from PoE Wiki; source=https://www.poewiki.net/wiki/The_Elder_(The_Shaper%27s_Realm)',
-          1782857871479,
-          1782857871479
+          1782858888876,
+          1782858888876
         );

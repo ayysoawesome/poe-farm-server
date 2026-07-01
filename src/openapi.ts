@@ -129,6 +129,31 @@ const latestProfitSchema = {
   }
 } as const;
 
+const divineChaosRateSchema = {
+  type: "object",
+  required: ["leagueId", "chaosValue", "capturedAt", "syncRunId"],
+  properties: {
+    leagueId: { type: "string" },
+    chaosValue: { type: "number" },
+    capturedAt: { type: "integer" },
+    syncRunId: { type: "string" }
+  }
+} as const;
+
+const freshnessStatusSchema = {
+  type: "object",
+  required: [
+    "leagueId",
+    "lastSuccessfulSyncFinishedAt",
+    "lastRecalculatedAt"
+  ],
+  properties: {
+    leagueId: { type: "string" },
+    lastSuccessfulSyncFinishedAt: { type: ["integer", "null"] },
+    lastRecalculatedAt: { type: ["integer", "null"] }
+  }
+} as const;
+
 const errorResponseSchema = {
   type: "object",
   required: ["error"],
@@ -180,7 +205,9 @@ export const openApiDocument = {
     { name: "Leagues" },
     { name: "Bosses" },
     { name: "Items" },
+    { name: "Prices" },
     { name: "Profit" },
+    { name: "Status" },
     { name: "Internal" }
   ],
   components: {
@@ -196,6 +223,8 @@ export const openApiDocument = {
       ErrorResponse: errorResponseSchema,
       Item: itemSchema,
       League: leagueSchema,
+      DivineChaosRate: divineChaosRateSchema,
+      FreshnessStatus: freshnessStatusSchema,
       Money: moneySchema,
       Profit: profitResponseSchema
     }
@@ -340,6 +369,22 @@ export const openApiDocument = {
         }
       }
     },
+    "/api/prices/divine-chaos": {
+      get: {
+        tags: ["Prices"],
+        summary: "Get the current Divine Orb to Chaos Orb rate",
+        parameters: [
+          { name: "leagueId", in: "query", required: true, schema: idSchema }
+        ],
+        responses: {
+          "200": jsonResponse(
+            "Current Divine Orb rate in Chaos Orbs.",
+            dataResponse(divineChaosRateSchema)
+          ),
+          ...errorResponses
+        }
+      }
+    },
     "/api/profit/{bossId}": {
       get: {
         tags: ["Profit"],
@@ -357,6 +402,22 @@ export const openApiDocument = {
               cache: { type: "string", enum: ["hit", "miss"] }
             }
           }),
+          ...errorResponses
+        }
+      }
+    },
+    "/api/status": {
+      get: {
+        tags: ["Status"],
+        summary: "Get latest public data freshness timestamps",
+        parameters: [
+          { name: "leagueId", in: "query", required: true, schema: idSchema }
+        ],
+        responses: {
+          "200": jsonResponse(
+            "Latest synchronization and recalculation timestamps.",
+            dataResponse(freshnessStatusSchema)
+          ),
           ...errorResponses
         }
       }

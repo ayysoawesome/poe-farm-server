@@ -25,8 +25,8 @@ export const bossItemSchema = z.object({
 export const bossEntryComponentSchema = z.object({
   item: bossItemSchema,
   quantity: z.number().positive(),
-  unitPrice: moneySchema,
-  totalPrice: moneySchema
+  unitPrice: moneySchema.nullable(),
+  totalPrice: moneySchema.nullable()
 });
 
 export const bossDropSchema = z.object({
@@ -41,7 +41,7 @@ export const bossDetailSchema = z.object({
   boss: bossSchema,
   entry: z.object({
     components: z.array(bossEntryComponentSchema),
-    totalPrice: moneySchema
+    totalPrice: moneySchema.nullable()
   }),
   drops: z.array(bossDropSchema)
 });

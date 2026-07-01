@@ -10,6 +10,7 @@ import { listActivePoeNinjaLeagues } from "../repositories/league.repository";
 import { findLatestPrices } from "../repositories/price.repository";
 import {
   findLatestProfitSnapshot,
+  listProfitHistory,
   upsertLatestProfitSnapshot
 } from "../repositories/profit.repository";
 import {
@@ -223,5 +224,9 @@ export class ProfitService {
     }
     await setCachedJson(this.env.PROFIT_CACHE, key, snapshot);
     return { snapshot, cache: "miss" };
+  }
+
+  async getHistory(bossId: string, leagueId: string): Promise<ProfitSnapshot[]> {
+    return listProfitHistory(createDb(this.env.DB), bossId, leagueId);
   }
 }

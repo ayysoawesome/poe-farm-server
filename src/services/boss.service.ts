@@ -27,32 +27,37 @@ export class BossService {
     );
   }
 
-  async getDetail(bossId: string, leagueId: string) {
-    await new LeagueService(this.env).requireById(leagueId);
+  async requireById(bossId: string) {
     const db = createDb(this.env.DB);
     const boss = await findBossById(db, bossId);
     if (boss === null) {
       throw new AppError(404, "BOSS_NOT_FOUND", `Boss '${bossId}' was not found`);
     }
+    return boss;
+  }
 
-    const snapshot = await findLatestProfitSnapshot(db, bossId, leagueId);
-    if (snapshot === null) {
-      throw new AppError(
-        404,
-        "PROFIT_SNAPSHOT_NOT_FOUND",
-        `No profit snapshot exists for boss '${bossId}' in league '${leagueId}'`
-      );
-    }
+  async getDetail(bossId: string, leagueId: string) {
+    await new LeagueService(this.env).requireById(leagueId);
+    const db = createDb(this.env.DB);
+    const boss = await this.requireById(bossId);
 
+    const snapshot = await findLatestProfitSnapshot(db, bossId, leagueId).catch(
+      () => null
+    );
     const [entryComponents, drops] = await Promise.all([
-      listBossEntryComponents(db, bossId),
-      listBossDrops(db, bossId)
+      listBossEntryComponents(db, bossId).catch(() => []),
+      listBossDrops(db, bossId).catch(() => [])
     ]);
     const itemIds = [
       ...entryComponents.map((component) => component.itemId),
       ...drops.map((drop) => drop.itemId)
     ];
-    const itemPrices = await findLatestPrices(this.env.DB, itemIds, leagueId);
+    let itemPrices: Awaited<ReturnType<typeof findLatestPrices>> = [];
+    try {
+      itemPrices = await findLatestPrices(this.env.DB, itemIds, leagueId);
+    } catch {
+      itemPrices = [];
+    }
     const prices = new Map(itemPrices.map((price) => [price.itemId, price.chaosValue]));
 
     return {
@@ -60,13 +65,6 @@ export class BossService {
       entry: {
         components: entryComponents.map((component) => {
           const unitPriceChaos = prices.get(component.itemId);
-          if (unitPriceChaos === undefined) {
-            throw new AppError(
-              503,
-              "MISSING_ITEM_PRICE",
-              `Missing price for ${component.itemName} (${component.itemId})`
-            );
-          }
           return {
             item: {
               id: component.itemId,
@@ -74,14 +72,23 @@ export class BossService {
               category: component.itemCategory
             },
             quantity: component.quantity,
-            unitPrice: toMoney(unitPriceChaos, snapshot.divineOrbChaosValue),
-            totalPrice: toMoney(
-              unitPriceChaos * component.quantity,
-              snapshot.divineOrbChaosValue
-            )
+            unitPrice:
+              unitPriceChaos === undefined || snapshot === null
+                ? null
+                : toMoney(unitPriceChaos, snapshot.divineOrbChaosValue),
+            totalPrice:
+              unitPriceChaos === undefined || snapshot === null
+                ? null
+                : toMoney(
+                    unitPriceChaos * component.quantity,
+                    snapshot.divineOrbChaosValue
+                  )
           };
         }),
-        totalPrice: toMoney(snapshot.entryCostChaos, snapshot.divineOrbChaosValue)
+        totalPrice:
+          snapshot === null
+            ? null
+            : toMoney(snapshot.entryCostChaos, snapshot.divineOrbChaosValue)
       },
       drops: drops.map((drop) => {
         const priceChaos = prices.get(drop.itemId);
@@ -95,7 +102,7 @@ export class BossService {
           dropGroupId: drop.dropGroupId,
           dropGroupType: drop.dropGroupType,
           price:
-            priceChaos === undefined
+            priceChaos === undefined || snapshot === null
               ? null
               : toMoney(priceChaos, snapshot.divineOrbChaosValue)
         };

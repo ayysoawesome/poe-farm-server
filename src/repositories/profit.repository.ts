@@ -1,4 +1,4 @@
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, max } from "drizzle-orm";
 
 import type { Database } from "../db/client";
 import { latestProfitSnapshots, profitSnapshots } from "../db/schema";
@@ -59,6 +59,42 @@ export const findLatestProfitSnapshot = async (
     .orderBy(desc(profitSnapshots.calculatedAt), desc(profitSnapshots.id))
     .limit(1);
   return rows[0] ?? null;
+};
+
+export const listProfitHistory = (
+  db: Database,
+  bossId: string,
+  leagueId: string
+) =>
+  db
+    .select()
+    .from(profitSnapshots)
+    .where(
+      and(
+        eq(profitSnapshots.bossId, bossId),
+        eq(profitSnapshots.leagueId, leagueId)
+      )
+    )
+    .orderBy(desc(profitSnapshots.calculatedAt), desc(profitSnapshots.id))
+    .limit(50);
+
+export const findLatestProfitRecalculatedAt = async (
+  db: Database,
+  leagueId: string
+): Promise<number | null> => {
+  try {
+    const latestRows = await db
+      .select({ calculatedAt: max(latestProfitSnapshots.calculatedAt) })
+      .from(latestProfitSnapshots)
+      .where(eq(latestProfitSnapshots.leagueId, leagueId));
+    return latestRows[0]?.calculatedAt ?? null;
+  } catch {
+    const rows = await db
+      .select({ calculatedAt: max(profitSnapshots.calculatedAt) })
+      .from(profitSnapshots)
+      .where(eq(profitSnapshots.leagueId, leagueId));
+    return rows[0]?.calculatedAt ?? null;
+  }
 };
 
 export const insertProfitSnapshot = async (

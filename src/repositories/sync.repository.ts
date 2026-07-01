@@ -33,3 +33,10 @@ export const findLatestSuccessfulSyncRun = async (db: Database) => {
     .limit(1);
   return rows[0] ?? null;
 };
+
+export const findLatestSuccessfulSyncFinishedAt = async (
+  db: Database
+): Promise<number | null> => {
+  const run = await findLatestSuccessfulSyncRun(db);
+  return run?.finishedAt ?? null;
+};

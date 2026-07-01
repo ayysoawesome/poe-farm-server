@@ -8,9 +8,21 @@ import { toProfitResponse } from "../schemas/profit.schema";
 import { ProfitService } from "../services/profit.service";
 import { parseInput } from "../utils/response";
 
-export const profitRoutes = new Hono<AppBindings>().get(
-  "/:bossId",
-  async (context) => {
+export const profitRoutes = new Hono<AppBindings>()
+  .get("/:bossId/history", async (context) => {
+    const { bossId } = parseInput(bossParamsSchema, context.req.param());
+    const { leagueId } = parseInput(leagueQuerySchema, context.req.query());
+    await Promise.all([
+      new BossService(context.env).requireById(bossId),
+      new LeagueService(context.env).requireById(leagueId)
+    ]);
+    const snapshots = await new ProfitService(context.env).getHistory(
+      bossId,
+      leagueId
+    );
+    return context.json({ data: snapshots.map(toProfitResponse) });
+  })
+  .get("/:bossId", async (context) => {
     const { bossId } = parseInput(bossParamsSchema, context.req.param());
     const { leagueId } = parseInput(leagueQuerySchema, context.req.query());
     await Promise.all([
@@ -25,5 +37,4 @@ export const profitRoutes = new Hono<AppBindings>().get(
       data: toProfitResponse(result.snapshot),
       cache: result.cache
     });
-  }
-);
+  });
