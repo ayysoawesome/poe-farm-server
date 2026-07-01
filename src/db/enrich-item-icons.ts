@@ -28,6 +28,8 @@ type PoeNinjaPayload = {
 };
 
 const DEFAULT_LEAGUES = ["Standard", "Mirage"];
+const DIVINATION_CARD_ICON_URL =
+  "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1&w=1&h=1";
 const STASH_ITEM_TYPES = [
   "SkillGem",
   "UniqueAccessory",
@@ -37,7 +39,8 @@ const STASH_ITEM_TYPES = [
   "UniqueWeapon"
 ];
 const EXCHANGE_TYPES = ["Fragment", "Invitation"];
-const CURRENCY_DETAIL_TYPES = ["Currency", "Fragment", "Invitation"];
+const POE_CDN_ICON_PREFIX = "https://web.poecdn.com/";
+const CURRENCY_DETAIL_TYPES = ["Currency", "Fragment", "Invitation", "DivinationCard"];
 const MANUAL_ICON_FALLBACK_TYPES = ["UniqueJewel"];
 
 const normalizeKey = (value: string): string =>
@@ -187,7 +190,7 @@ const buildIconIndex = async (
   const neededTypes = new Set([
     ...MANUAL_ICON_FALLBACK_TYPES,
     ...items
-      .filter((item) => item.iconUrl == null)
+      .filter((item) => item.iconUrl == null || !item.iconUrl.startsWith(POE_CDN_ICON_PREFIX))
       .map((item) => item.externalType ?? item.poeNinjaType)
       .filter((value): value is string => value !== undefined)
   ]);
@@ -222,6 +225,11 @@ const iconLookupCandidates = (item: CuratedItem): string[] => {
   );
 };
 
+const staticPoeNinjaIconUrl = (item: CuratedItem): string | null =>
+  (item.externalType ?? item.poeNinjaType) === "DivinationCard"
+    ? DIVINATION_CARD_ICON_URL
+    : null;
+
 const main = async () => {
   const inputPath = resolve(process.argv[2] ?? "data/curated/items.json");
   const leagues =
@@ -234,7 +242,7 @@ const main = async () => {
   let updated = 0;
   const enriched: CuratedItem[] = [];
   for (const item of items) {
-    if (item.iconUrl != null) {
+    if (item.iconUrl != null && item.iconUrl.startsWith(POE_CDN_ICON_PREFIX)) {
       enriched.push(item);
       continue;
     }
@@ -244,7 +252,9 @@ const main = async () => {
       )
       .find((value): value is string => value !== undefined);
     const fallbackIconUrl =
-      iconUrl ?? (await fetchPoewikiIconUrl(iconLookupCandidates(item).at(-1) ?? item.name));
+      iconUrl ??
+      staticPoeNinjaIconUrl(item) ??
+      (await fetchPoewikiIconUrl(iconLookupCandidates(item).at(-1) ?? item.name));
     if (fallbackIconUrl === null || fallbackIconUrl === undefined) {
       missing.push(`${item.id} (${item.name})`);
       enriched.push(item);

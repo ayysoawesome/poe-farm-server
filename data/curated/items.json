@@ -5,7 +5,7 @@
     "category": "divination_card",
     "externalType": "DivinationCard",
     "externalKey": "A Fate Worse Than Death",
-    "iconUrl": "https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png"
+    "iconUrl": "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1&w=1&h=1"
   },
   {
     "id": "annihilation-support",
@@ -61,7 +61,7 @@
     "category": "divination_card",
     "externalType": "DivinationCard",
     "externalKey": "Auspicious Ambitions",
-    "iconUrl": "https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png"
+    "iconUrl": "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1&w=1&h=1"
   },
   {
     "id": "awakened-enhance-support",
@@ -757,7 +757,7 @@
     "category": "divination_card",
     "externalType": "DivinationCard",
     "externalKey": "Void of the Elements",
-    "iconUrl": "https://www.poewiki.net/images/6/68/Divination_card_inventory_icon.png"
+    "iconUrl": "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1&w=1&h=1"
   },
   {
     "id": "voidfletcher",
