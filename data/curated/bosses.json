@@ -4,6 +4,7 @@
     "name": "Eater of Worlds",
     "slug": "eater-of-worlds",
     "description": "The Eater of Worlds pinnacle encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9UYW5nbGVkT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/75de691c2b/TangledOrbQuest5.png",
     "entryComponents": [
       {
         "itemId": "screaming-invitation",
@@ -58,6 +59,7 @@
     "name": "Uber Eater of Worlds",
     "slug": "uber-eater-of-worlds",
     "description": "The Uber Eater of Worlds pinnacle encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVhdGVyT2ZXb3JsZHMiLCJzY2FsZSI6MX1d/6022aa0897/UberBossKeyEaterOfWorlds.png",
     "entryComponents": [
       {
         "itemId": "devouring-fragment",
@@ -129,6 +131,7 @@
     "name": "Exarch",
     "slug": "exarch",
     "description": "The Searing Exarch pinnacle encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUXVlc3RJdGVtcy9DbGVhbnNpbmdGaXJlT3JiUXVlc3Q1IiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/e6f9234053/CleansingFireOrbQuest5.png",
     "entryComponents": [
       {
         "itemId": "incandescent-invitation",
@@ -205,6 +208,7 @@
     "name": "Uber Exarch",
     "slug": "uber-exarch",
     "description": "The Uber Searing Exarch pinnacle encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNlYXJpbmdFeGFyY2giLCJzY2FsZSI6MX1d/cc2f3bce1b/UberBossKeySearingExarch.png",
     "entryComponents": [
       {
         "itemId": "blazing-fragment",
@@ -286,6 +290,7 @@
     "name": "Maven",
     "slug": "maven",
     "description": "The Maven pinnacle encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQXRsYXMvTWF2ZW5LZXkiLCJzY2FsZSI6MX1d/40683e487b/MavenKey.png",
     "entryComponents": [
       {
         "itemId": "mavens-writ",
@@ -345,6 +350,7 @@
     "name": "Uber Maven",
     "slug": "uber-maven",
     "description": "The Uber Maven encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleU1hdmVuIiwic2NhbGUiOjF9XQ/20e155ad7d/UberBossKeyMaven.png",
     "entryComponents": [
       {
         "itemId": "reality-fragment",
@@ -419,6 +425,7 @@
     "name": "Shaper",
     "slug": "shaper",
     "description": "The Shaper pinnacle encounter.",
+    "iconUrl": "https://www.poewiki.net/images/f/f7/Key_to_the_Crucible_inventory_icon.png",
     "entryComponents": [
       {
         "itemId": "fragment-phoenix",
@@ -493,6 +500,7 @@
     "name": "Uber Shaper",
     "slug": "uber-shaper",
     "description": "The Uber Shaper encounter.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNoYXBlciIsInNjYWxlIjoxfV0/719e96a82a/UberBossKeyShaper.png",
     "entryComponents": [
       {
         "itemId": "cosmic-fragment",
@@ -552,6 +560,7 @@
     "name": "Sirus",
     "slug": "sirus",
     "description": "Sirus, Awakener of Worlds.",
+    "iconUrl": "https://www.poewiki.net/images/b/b6/Crest_of_the_Elderslayers_inventory_icon.png",
     "entryComponents": [
       {
         "itemId": "veritanias-crest",
@@ -619,6 +628,7 @@
     "name": "Uber Sirus",
     "slug": "uber-sirus",
     "description": "Sirus, Awakener of Worlds.",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleVNpcnVzIiwic2NhbGUiOjF9XQ/094681ee85/UberBossKeySirus.png",
     "entryComponents": [
       {
         "itemId": "awakening-fragment",
@@ -680,6 +690,7 @@
     "name": "Elder",
     "slug": "elder",
     "description": "The Elder encounter.",
+    "iconUrl": "https://www.poewiki.net/images/6/6a/Key_to_Decay_inventory_icon.png",
     "entryComponents": [
       {
         "itemId": "fragment-of-purification",
@@ -811,6 +822,7 @@
     "name": "Uber Elder",
     "slug": "uber-elder",
     "description": "The combined Elder and Shaper encounter.",
+    "iconUrl": "https://www.poewiki.net/images/b/b0/Maddening_Object_inventory_icon.png",
     "entryComponents": [
       {
         "itemId": "fragment-of-knowledge",
@@ -902,6 +914,7 @@
     "name": "Uber Uber Elder",
     "slug": "uber-uber-elder",
     "description": "The combined Elder and Shaper encounter (uber).",
+    "iconUrl": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VYmVyQm9zc0tleUVsZGVyIiwic2NhbGUiOjF9XQ/42d1e96e4e/UberBossKeyElder.png",
     "entryComponents": [
       {
         "itemId": "decaying-fragment",

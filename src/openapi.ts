@@ -33,12 +33,13 @@ const itemSchema = {
 
 const bossSchema = {
   type: "object",
-  required: ["id", "name", "slug", "description", "isActive", "createdAt", "updatedAt"],
+  required: ["id", "name", "slug", "description", "iconUrl", "isActive", "createdAt", "updatedAt"],
   properties: {
     id: idSchema,
     name: { type: "string" },
     slug: { type: "string" },
     description: { type: ["string", "null"] },
+    iconUrl: { type: ["string", "null"] },
     isActive: { type: "boolean" },
     createdAt: { type: "integer" },
     updatedAt: { type: "integer" }

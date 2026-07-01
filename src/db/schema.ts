@@ -185,6 +185,7 @@ export const bosses = sqliteTable(
     name: text("name").notNull(),
     slug: text("slug").notNull(),
     description: text("description"),
+    iconUrl: text("icon_url"),
     isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
     ...timestamps
   },

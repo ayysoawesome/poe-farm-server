@@ -56,6 +56,7 @@ const bossFixture = [
       name: "Maven",
       slug: "maven",
       description: "The Maven pinnacle encounter.",
+      iconUrl: "https://www.poewiki.net/images/5/52/Maven%27s_Writ_inventory_icon.png",
       entryComponents: [{ itemId: "mavens-writ", quantity: 1 }],
       drops: [
         {
@@ -108,6 +109,16 @@ describe.sequential("curated data import SQL", () => {
     ).resolves.toEqual([{ provider: "manual", externalType: "Manual" }]);
     await expect(query<{ count: number }>("SELECT COUNT(*) AS count FROM bosses"))
       .resolves.toEqual([{ count: 1 }]);
+    await expect(
+      query<{ iconUrl: string }>(
+        "SELECT icon_url AS iconUrl FROM bosses WHERE id = 'maven'"
+      )
+    ).resolves.toEqual([
+      {
+        iconUrl:
+          "https://www.poewiki.net/images/5/52/Maven%27s_Writ_inventory_icon.png"
+      }
+    ]);
     await expect(
       query<{ count: number }>(
         "SELECT COUNT(*) AS count FROM boss_entry_components"

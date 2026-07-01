@@ -9,6 +9,7 @@ export const bossSchema = z.object({
   name: z.string().min(1),
   slug: z.string().min(1),
   description: z.string().nullable(),
+  iconUrl: z.string().nullable(),
   isActive: z.boolean(),
   createdAt: z.number().int(),
   updatedAt: z.number().int()

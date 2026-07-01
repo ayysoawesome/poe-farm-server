@@ -53,6 +53,7 @@ const curatedBossSchema = z.object({
   name: z.string().trim().min(1),
   slug: z.string().trim().min(1),
   description: z.string().nullable().optional(),
+  iconUrl: z.string().trim().min(1).nullable().optional(),
   isActive: z.boolean().optional(),
   entryComponents: z
     .array(
@@ -213,12 +214,13 @@ export const buildCuratedSql = (input: unknown, timestamp = Date.now()): string 
   for (const boss of data.bosses) {
     statements.push(
       `INSERT INTO bosses (
-        id, name, slug, description, is_active, created_at, updated_at
+        id, name, slug, description, icon_url, is_active, created_at, updated_at
       ) VALUES (
         ${sqlString(boss.id)},
         ${sqlString(boss.name)},
         ${sqlString(boss.slug)},
         ${sqlString(boss.description)},
+        ${sqlString(boss.iconUrl)},
         ${boss.isActive === false ? 0 : 1},
         ${timestamp},
         ${timestamp}
@@ -227,6 +229,7 @@ export const buildCuratedSql = (input: unknown, timestamp = Date.now()): string 
         name = excluded.name,
         slug = excluded.slug,
         description = excluded.description,
+        icon_url = excluded.icon_url,
         is_active = excluded.is_active,
         updated_at = excluded.updated_at`,
       `DELETE FROM boss_entry_components WHERE boss_id = ${sqlString(boss.id)}`,

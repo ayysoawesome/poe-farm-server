@@ -20,6 +20,8 @@ import migration7 from "../../drizzle/migrations/0007_manual_item_prices.sql?raw
 import migration8 from "../../drizzle/migrations/0008_latest_operational_tables.sql?raw";
 // @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
 import migration9 from "../../drizzle/migrations/0009_item_divination_card_category.sql?raw";
+// @ts-expect-error Vite loads migration SQL as text for the Workers test pool.
+import migration10 from "../../drizzle/migrations/0010_boss_icon_url.sql?raw";
 
 export const migrationSql = [
   migration0,
@@ -31,7 +33,8 @@ export const migrationSql = [
   migration6,
   migration7,
   migration8,
-  migration9
+  migration9,
+  migration10
 ];
 
 const splitMigration = (sql: string) =>
@@ -98,7 +101,7 @@ export const applyLegacyMigrations = async () => {
 };
 
 export const applyAllMigrations = async () => {
-  for (const migration of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+  for (const migration of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
     await executeMigration(migration);
   }
 };

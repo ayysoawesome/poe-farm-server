@@ -67,6 +67,7 @@ describe("Drizzle schema constraints", () => {
   it("defines constrained items and independent bosses", () => {
     expect(checkNames(schema.items)).toContain("items_category_check");
     expect(columnNames(schema.bosses)).not.toContain("is_uber");
+    expect(columnNames(schema.bosses)).toContain("icon_url");
     expect(indexNames(schema.bosses)).toContain("bosses_slug_unique");
     expect(columnNames(schema.leagues)).toContain("external_name");
     expect(columnNames(schema.leagues)).toContain("source");
