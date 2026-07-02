@@ -19,6 +19,7 @@ export const listBossEntryComponents = (db: Database, bossId: string) =>
       itemId: bossEntryComponents.itemId,
       itemName: items.name,
       itemCategory: items.category,
+      itemIconUrl: items.iconUrl,
       quantity: bossEntryComponents.quantity,
       createdAt: bossEntryComponents.createdAt,
       updatedAt: bossEntryComponents.updatedAt
@@ -36,6 +37,7 @@ export const listBossDrops = (db: Database, bossId: string) =>
       itemId: bossDrops.itemId,
       itemName: items.name,
       itemCategory: items.category,
+      itemIconUrl: items.iconUrl,
       dropRate: bossDrops.dropRate,
       dropGroupId: bossDrops.dropGroupId,
       dropGroupType: bossDrops.dropGroupType,

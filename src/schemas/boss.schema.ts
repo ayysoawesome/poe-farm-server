@@ -3,6 +3,7 @@ import { z } from "zod";
 import { idSchema } from "./common.schema";
 import { itemCategorySchema } from "./item.schema";
 import { moneySchema } from "./money.schema";
+import { profitResponseSchema } from "./profit.schema";
 
 export const bossSchema = z.object({
   id: idSchema,
@@ -20,7 +21,8 @@ export type Boss = z.infer<typeof bossSchema>;
 export const bossItemSchema = z.object({
   id: idSchema,
   name: z.string().min(1),
-  category: itemCategorySchema
+  category: itemCategorySchema,
+  iconUrl: z.string().nullable()
 });
 
 export const bossEntryComponentSchema = z.object({
@@ -43,6 +45,10 @@ export const bossDetailSchema = z.object({
   entry: z.object({
     components: z.array(bossEntryComponentSchema),
     totalPrice: moneySchema.nullable()
+  }),
+  profit: z.object({
+    latest: profitResponseSchema.nullable(),
+    history: z.array(profitResponseSchema)
   }),
   drops: z.array(bossDropSchema)
 });

@@ -9,7 +9,9 @@ import {
 import { listActivePoeNinjaLeagues } from "../repositories/league.repository";
 import { findLatestPrices } from "../repositories/price.repository";
 import {
+  findLatestProfitHistorySnapshot,
   findLatestProfitSnapshot,
+  insertProfitSnapshot,
   listProfitHistory,
   upsertLatestProfitSnapshot
 } from "../repositories/profit.repository";
@@ -25,6 +27,7 @@ import {
 } from "../schemas/profit.schema";
 
 const DIVINE_ORB_ITEM_ID = "divine-orb";
+const PROFIT_HISTORY_CHECKPOINT_INTERVAL_MS = 4 * 60 * 60 * 1000;
 
 export type PricedEntryComponent = {
   itemId: string;
@@ -167,12 +170,32 @@ export class ProfitService {
       createdAt: timestamp
     };
     await upsertLatestProfitSnapshot(this.env.DB, snapshot);
+    await this.storeHistoryCheckpoint(db, snapshot);
     await setCachedJson(
       this.env.PROFIT_CACHE,
       profitCacheKey(leagueId, bossId),
       snapshot
     );
     return snapshot;
+  }
+
+  private async storeHistoryCheckpoint(
+    db: ReturnType<typeof createDb>,
+    snapshot: ProfitSnapshot
+  ) {
+    const latestHistory = await findLatestProfitHistorySnapshot(
+      db,
+      snapshot.bossId,
+      snapshot.leagueId
+    );
+    if (
+      latestHistory !== null &&
+      snapshot.calculatedAt - latestHistory.calculatedAt <
+        PROFIT_HISTORY_CHECKPOINT_INTERVAL_MS
+    ) {
+      return;
+    }
+    await insertProfitSnapshot(db, snapshot);
   }
 
   async recalculateAll(syncRunId: string): Promise<number> {
@@ -226,7 +249,11 @@ export class ProfitService {
     return { snapshot, cache: "miss" };
   }
 
-  async getHistory(bossId: string, leagueId: string): Promise<ProfitSnapshot[]> {
-    return listProfitHistory(createDb(this.env.DB), bossId, leagueId);
+  async getHistory(
+    bossId: string,
+    leagueId: string,
+    limit = 50
+  ): Promise<ProfitSnapshot[]> {
+    return listProfitHistory(createDb(this.env.DB), bossId, leagueId, limit);
   }
 }

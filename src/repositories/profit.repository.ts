@@ -64,7 +64,8 @@ export const findLatestProfitSnapshot = async (
 export const listProfitHistory = (
   db: Database,
   bossId: string,
-  leagueId: string
+  leagueId: string,
+  limit = 50
 ) =>
   db
     .select()
@@ -76,7 +77,16 @@ export const listProfitHistory = (
       )
     )
     .orderBy(desc(profitSnapshots.calculatedAt), desc(profitSnapshots.id))
-    .limit(50);
+    .limit(limit);
+
+export const findLatestProfitHistorySnapshot = async (
+  db: Database,
+  bossId: string,
+  leagueId: string
+) => {
+  const rows = await listProfitHistory(db, bossId, leagueId, 1);
+  return rows[0] ?? null;
+};
 
 export const findLatestProfitRecalculatedAt = async (
   db: Database,

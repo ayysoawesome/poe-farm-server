@@ -1,5 +1,5 @@
 import { env } from "cloudflare:workers";
-import { beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { BossService } from "../src/services/boss.service";
 import { ProfitService } from "../src/services/profit.service";
@@ -24,14 +24,14 @@ const insertBaseFixtures = async () => {
       "INSERT INTO bosses (id, name, slug, description, is_active, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
     ).bind("boss-without-entry", "Boss Without Entry", "boss-without-entry", "Boss", 1, now, now),
     env.DB.prepare(
-      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
-    ).bind("entry-a", "Entry A", "fragment", now, now),
+      "INSERT INTO items (id, name, category, icon_url, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
+    ).bind("entry-a", "Entry A", "fragment", "https://web.poecdn.com/entry-a.png", now, now),
     env.DB.prepare(
       "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
     ).bind("entry-b", "Entry B", "fragment", now, now),
     env.DB.prepare(
-      "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
-    ).bind("known", "Known", "equipment", now, now),
+      "INSERT INTO items (id, name, category, icon_url, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
+    ).bind("known", "Known", "equipment", "https://web.poecdn.com/known.png", now, now),
     env.DB.prepare(
       "INSERT INTO items (id, name, category, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
     ).bind("unknown", "Unknown", "equipment", now, now),
@@ -112,9 +112,14 @@ const insertBaseFixtures = async () => {
 
 describe.sequential("ProfitService snapshot creation", () => {
   beforeEach(async () => {
+    vi.useRealTimers();
     await resetMigrationDatabase();
     await applyAllMigrations();
     await insertBaseFixtures();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   it("creates a snapshot using only the selected synchronized price set", async () => {
@@ -136,6 +141,62 @@ describe.sequential("ProfitService snapshot creation", () => {
     });
   });
 
+  it("stores profit history checkpoints at most once every four hours", async () => {
+    const service = new ProfitService(testEnv);
+
+    vi.setSystemTime(new Date("2026-07-02T00:00:00.000Z"));
+    await service.calculateAndStore("boss-1", "league-1", "sync-selected");
+
+    vi.setSystemTime(new Date("2026-07-02T03:59:59.000Z"));
+    await service.calculateAndStore("boss-1", "league-1", "sync-selected");
+
+    let historyCount = await env.DB.prepare(
+      "SELECT COUNT(*) AS count FROM profit_snapshots WHERE boss_id = ? AND league_id = ?"
+    )
+      .bind("boss-1", "league-1")
+      .first<{ count: number }>();
+    expect(historyCount?.count).toBe(1);
+
+    vi.setSystemTime(new Date("2026-07-02T04:00:00.000Z"));
+    await service.calculateAndStore("boss-1", "league-1", "sync-selected");
+
+    historyCount = await env.DB.prepare(
+      "SELECT COUNT(*) AS count FROM profit_snapshots WHERE boss_id = ? AND league_id = ?"
+    )
+      .bind("boss-1", "league-1")
+      .first<{ count: number }>();
+    expect(historyCount?.count).toBe(2);
+  });
+
+  it("returns latest profit and compact history in boss details", async () => {
+    vi.setSystemTime(new Date("2026-07-02T00:00:00.000Z"));
+    await new ProfitService(testEnv).calculateAndStore(
+      "boss-1",
+      "league-1",
+      "sync-selected"
+    );
+
+    const detail = await new BossService(testEnv).getDetail("boss-1", "league-1");
+
+    expect(detail.profit.latest).toMatchObject({
+      bossId: "boss-1",
+      leagueId: "league-1",
+      entryCost: { chaos: 50, divine: 0.25 },
+      expectedReturn: { chaos: 25, divine: 0.125 },
+      expectedProfit: { chaos: -25, divine: -0.125 },
+      roiPercent: -50,
+      isComplete: false,
+      unknownDropCount: 1
+    });
+    expect(detail.profit.history).toHaveLength(1);
+    expect(detail.profit.history[0]).toMatchObject({
+      bossId: "boss-1",
+      leagueId: "league-1",
+      expectedProfit: { chaos: -25, divine: -0.125 },
+      roiPercent: -50
+    });
+  });
+
   it("returns drop group metadata in boss details", async () => {
     await new ProfitService(testEnv).calculateAndStore(
       "boss-1",
@@ -150,6 +211,33 @@ describe.sequential("ProfitService snapshot creation", () => {
         item: expect.objectContaining({ id: "known" }),
         dropGroupId: "boss-1-one-of",
         dropGroupType: "one_of"
+      })
+    );
+  });
+
+  it("returns item icon URLs in boss details", async () => {
+    await new ProfitService(testEnv).calculateAndStore(
+      "boss-1",
+      "league-1",
+      "sync-selected"
+    );
+
+    const detail = await new BossService(testEnv).getDetail("boss-1", "league-1");
+
+    expect(detail.entry.components).toContainEqual(
+      expect.objectContaining({
+        item: expect.objectContaining({
+          id: "entry-a",
+          iconUrl: "https://web.poecdn.com/entry-a.png"
+        })
+      })
+    );
+    expect(detail.drops).toContainEqual(
+      expect.objectContaining({
+        item: expect.objectContaining({
+          id: "known",
+          iconUrl: "https://web.poecdn.com/known.png"
+        })
       })
     );
   });

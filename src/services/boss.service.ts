@@ -7,10 +7,16 @@ import {
   listBossEntryComponents
 } from "../repositories/boss.repository";
 import { findLatestPrices } from "../repositories/price.repository";
-import { findLatestProfitSnapshot } from "../repositories/profit.repository";
+import {
+  findLatestProfitSnapshot,
+  listProfitHistory
+} from "../repositories/profit.repository";
 import { toMoney } from "../schemas/money.schema";
+import { toProfitResponse } from "../schemas/profit.schema";
 import { AppError } from "../utils/errors";
 import { LeagueService } from "./league.service";
+
+const BOSS_DETAIL_PROFIT_HISTORY_LIMIT = 24;
 
 export class BossService {
   constructor(private readonly env: Env) {}
@@ -44,9 +50,15 @@ export class BossService {
     const snapshot = await findLatestProfitSnapshot(db, bossId, leagueId).catch(
       () => null
     );
-    const [entryComponents, drops] = await Promise.all([
+    const [entryComponents, drops, profitHistory] = await Promise.all([
       listBossEntryComponents(db, bossId).catch(() => []),
-      listBossDrops(db, bossId).catch(() => [])
+      listBossDrops(db, bossId).catch(() => []),
+      listProfitHistory(
+        db,
+        bossId,
+        leagueId,
+        BOSS_DETAIL_PROFIT_HISTORY_LIMIT
+      ).catch(() => [])
     ]);
     const itemIds = [
       ...entryComponents.map((component) => component.itemId),
@@ -69,7 +81,8 @@ export class BossService {
             item: {
               id: component.itemId,
               name: component.itemName,
-              category: component.itemCategory
+              category: component.itemCategory,
+              iconUrl: component.itemIconUrl
             },
             quantity: component.quantity,
             unitPrice:
@@ -90,13 +103,18 @@ export class BossService {
             ? null
             : toMoney(snapshot.entryCostChaos, snapshot.divineOrbChaosValue)
       },
+      profit: {
+        latest: snapshot === null ? null : toProfitResponse(snapshot),
+        history: profitHistory.map(toProfitResponse)
+      },
       drops: drops.map((drop) => {
         const priceChaos = prices.get(drop.itemId);
         return {
           item: {
             id: drop.itemId,
             name: drop.itemName,
-            category: drop.itemCategory
+            category: drop.itemCategory,
+            iconUrl: drop.itemIconUrl
           },
           dropRate: drop.dropRate,
           dropGroupId: drop.dropGroupId,
